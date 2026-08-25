@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digital Products for Beginners | EarnPath</title>
+
+  <meta name="description" content="Learn how beginners can create and sell useful digital products online.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 7%;
+    }
+
+    .logo {
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #16a34a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EarnPath</div>
+</header>
+
+<main>
+
+  <a href="index.html" class="back">← Back to EarnPath</a>
+
+  <div class="content">
+
+    <h1>Digital Products for Beginners</h1>
+
+    <p>
+      Digital products are products that customers can receive or use
+      electronically. They can be created once and sold to multiple
+      customers.
+    </p>
+
+    <h2>What Can You Create?</h2>
+
+    <p>
+      Examples include ebooks, checklists, templates, planners,
+      educational guides, design resources, spreadsheets, and other
+      useful digital resources.
+    </p>
+
+    <h2>Step 1 — Find a Problem</h2>
+
+    <p>
+      Think about a problem people regularly have. A good digital
+      product should make something easier, faster, or more organized.
+    </p>
+
+    <h2>Step 2 — Create a Solution</h2>
+
+    <p>
+      Turn your knowledge or research into a clear and useful resource.
+      Focus on providing genuine value rather than making unrealistic
+      promises.
+    </p>
+
+    <h2>Step 3 — Make It Professional</h2>
+
+    <p>
+      Give your product a clear title, organize the information well,
+      proofread it, and make it easy for customers to use.
+    </p>
+
+    <h2>Step 4 — Choose a Selling Platform</h2>
+
+    <p>
+      You can use a legitimate digital-commerce platform to sell and
+      deliver your product. Check the platform's fees, payment options,
+      and availability in your country before choosing one.
+    </p>
+
+    <h2>Step 5 — Promote Your Product</h2>
+
+    <p>
+      Create useful content related to your product and share it through
+      appropriate social media or other channels where your audience is
+      active.
+    </p>
+
+    <h2>Important Tip</h2>
+
+    <p>
+      Don't copy other people's products or copyrighted material.
+      Create original work or use material that you have permission to use.
+    </p>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
+</footer>
+
+</body>
+</html>
