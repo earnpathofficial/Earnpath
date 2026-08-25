@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Affiliate Marketing for Beginners | EarnPath</title>
+
+  <meta name="description" content="A simple beginner's guide to understanding affiliate marketing and getting started online.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 7%;
+    }
+
+    .logo {
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #16a34a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EarnPath</div>
+</header>
+
+<main>
+
+  <a href="index.html" class="back">← Back to EarnPath</a>
+
+  <div class="content">
+
+    <h1>Affiliate Marketing for Beginners</h1>
+
+    <p>
+      Affiliate marketing is a way to earn commissions by recommending
+      products or services from companies that offer affiliate programs.
+    </p>
+
+    <h2>How Does It Work?</h2>
+
+    <p>
+      You join an affiliate program and receive a special tracking link.
+      When someone purchases through your link, you may receive a commission.
+    </p>
+
+    <h2>Step 1 — Choose a Topic</h2>
+
+    <p>
+      Start with something you understand or want to learn about, such as
+      technology, education, fitness, fashion, software, or online tools.
+    </p>
+
+    <h2>Step 2 — Find Suitable Products</h2>
+
+    <p>
+      Look for legitimate products that provide real value to your audience.
+      Always check the terms and conditions of an affiliate program before
+      promoting it.
+    </p>
+
+    <h2>Step 3 — Create Useful Content</h2>
+
+    <p>
+      You can create educational videos, reviews, tutorials, social media
+      posts, or articles that genuinely help people.
+    </p>
+
+    <h2>Step 4 — Share Your Affiliate Link</h2>
+
+    <p>
+      Where permitted by the platform and affiliate program, you can share
+      your affiliate link with your audience. Be transparent that you may
+      earn a commission from qualifying purchases.
+    </p>
+
+    <h2>Important Tip</h2>
+
+    <p>
+      Affiliate marketing is not guaranteed income. Focus on helping people,
+      building trust, and learning consistently rather than promising quick
+      money.
+    </p>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
+</footer>
+
+</body>
+</html>
