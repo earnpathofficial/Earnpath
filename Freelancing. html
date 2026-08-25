@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Freelancing for Beginners | EarnPath</title>
+
+  <meta name="description" content="A simple beginner's guide to freelancing, finding skills, building experience, and getting started online.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 7%;
+    }
+
+    .logo {
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #16a34a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EarnPath</div>
+</header>
+
+<main>
+
+  <a href="index.html" class="back">← Back to EarnPath</a>
+
+  <div class="content">
+
+    <h1>Freelancing for Beginners</h1>
+
+    <p>
+      Freelancing means offering your skills or services to clients
+      without working as a permanent employee for one company.
+    </p>
+
+    <h2>What Can You Freelance?</h2>
+
+    <p>
+      Beginners can explore services such as writing, graphic design,
+      video editing, virtual assistance, translation, social media
+      management, website creation, and other digital skills.
+    </p>
+
+    <h2>Step 1 — Choose One Skill</h2>
+
+    <p>
+      Don't try to learn everything at once. Choose one skill that
+      interests you and spend time learning the basics.
+    </p>
+
+    <h2>Step 2 — Practice</h2>
+
+    <p>
+      Create small projects to improve your ability. You can build
+      examples for your portfolio even before getting your first client.
+    </p>
+
+    <h2>Step 3 — Build a Portfolio</h2>
+
+    <p>
+      A portfolio shows potential clients what you can do. Include
+      your strongest examples and clearly explain what you created.
+    </p>
+
+    <h2>Step 4 — Find Clients</h2>
+
+    <p>
+      You can look for legitimate freelance opportunities through
+      established freelance platforms, professional networks, or
+      direct outreach to businesses.
+    </p>
+
+    <h2>Step 5 — Deliver Quality Work</h2>
+
+    <p>
+      Communicate clearly, respect deadlines, and provide work that
+      matches what you agreed with the client.
+    </p>
+
+    <h2>Important Tip</h2>
+
+    <p>
+      Freelancing is not guaranteed quick income. Be patient, keep
+      improving your skills, and never pay someone simply because
+      they promise you a guaranteed freelance job.
+    </p>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
+</footer>
+
+</body>
+</html>
