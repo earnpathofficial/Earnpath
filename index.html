@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +15,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f5f7fb;
@@ -29,18 +32,31 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
 
     .logo {
       color: white;
       font-size: 26px;
       font-weight: bold;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
     }
 
     .hero {
@@ -73,6 +89,11 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+    }
+
+    .button:hover {
+      opacity: 0.9;
     }
 
     .section {
@@ -95,7 +116,7 @@
       background: white;
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
     }
 
     .card h3 {
@@ -104,6 +125,7 @@
 
     .card p {
       color: #667085;
+      margin-bottom: 18px;
     }
 
     footer {
@@ -113,14 +135,59 @@
       padding: 30px 15px;
     }
 
-    @media (max-width: 600px) {
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 15px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+
       .hero h1 {
         font-size: 34px;
       }
 
-      nav a {
-        margin-left: 8px;
-        font-size: 14px;
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 45px 20px;
+      }
+
+      .section h2 {
+        font-size: 27px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -128,216 +195,253 @@
 
 <body>
 
-<header>
-  <div class="logo">EarnPath</div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">EarnPath</div>
 
-  <nav>
-    <<nav>
-  
-  <nav>
-  <a href="#ways">Ways to Earn</a>
-  <a href="#learn">Learn</a>
-  <a href="#guides">Guides</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-  <a href="#disclosure">Disclosure</a>
-  <a href="#resources">Resources</a>
-</nav>
-    
-  <
-</hea
+    <nav>
+      <a href="#ways">Ways to Earn</a>
+      <a href="#learn">Learn</a>
+      <a href="#guides">Guides</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#disclosure">Disclosure</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>Find Your <span>Path to Earning</span></h1>
 
-  <p>
-    EarnPath helps beginners discover practical online opportunities,
-    useful skills, and simple ways to start building income.
-  </p>
-
-  <a href="#ways" class="button">Explore EarnPath</a>
-</section>
-
-<section class="section" id="ways">
-  <h2>Ways to Earn Online</h2>
-
-  <div class="cards">
-
-    <a href="freelancing.html" class="button">Read Guide</a>
-      <p>
-        Learn how beginners can use their skills to offer services online.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>📱 Affiliate Marketing</h3>
-      <p>
-        Discover how affiliate marketing works and how to promote useful products.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Digital Products</h3>
-      <p>
-        Learn how to create simple digital products and sell them online.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>📚 Learn New Skills</h3>
-      <p>
-        Explore skills that can help you create opportunities and increase your income.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="learn">
-  <h2>Start as a Beginner</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Step 1 — Learn</h3>
-      <p>Choose one useful skill and start learning the basics.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 2 — Practice</h3>
-      <p>Practice what you learn and create something you can show others.</p>
-    </div>
-
-    <div class="card">
-      <h3>Step 3 — Earn</h3>
-      <p>Use your skill to find opportunities and start generating income.</p>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
-</footer>
-<section class="section" id="contact">
-  <h2>Contact EarnPath</h2>
-
-  <div class="card">
-    <p>
-      Have a question, suggestion, or partnership idea?
-      We'd love to hear from you.
-    </p>
-<section class="section" id="disclosure">
-  <h2>Affiliate Disclosure</h2>
-
-  <div class="card">
-    <p>
-      Some links on EarnPath may be affiliate links. If you purchase
-      something through one of these links, EarnPath may receive a
-      commission at no additional cost to you.
-    </p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Find Your <span>Path to Earning</span></h1>
 
     <p>
-      We aim to recommend useful products and services that may provide
-      value to our readers. Always do your own research before making
-      a purchase.
+      EarnPath helps beginners discover practical online opportunities,
+      useful skills, and simple ways to start building income.
     </p>
-  </div>
-</section>
-    <p>
-      Email us at:
-      bioabubakarusman@gmail.com 
-    </p>
-  </div>
-</section>
+
+    <a href="#ways" class="button">Explore EarnPath</a>
+  </section>
+
+
+  <!-- WAYS TO EARN -->
+  <section class="section" id="ways">
+    <h2>Ways to Earn Online</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>💼 Freelancing</h3>
+        <p>
+          Learn how beginners can use their skills to offer services online.
+        </p>
+        <a href="freelancing.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>📱 Affiliate Marketing</h3>
+        <p>
+          Discover how affiliate marketing works and how to promote useful products.
+        </p>
+        <a href="affiliate-marketing.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Digital Products</h3>
+        <p>
+          Learn how to create simple digital products and sell them online.
+        </p>
+        <a href="digital-products.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>📚 Learn New Skills</h3>
+        <p>
+          Explore skills that can help you create opportunities and increase your income.
+        </p>
+        <a href="#learn" class="button">Start Learning</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- LEARN -->
+  <section class="section" id="learn">
+    <h2>Start as a Beginner</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Step 1 — Learn</h3>
+        <p>
+          Choose one useful skill and start learning the basics.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Step 2 — Practice</h3>
+        <p>
+          Practice what you learn and create something you can show others.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Step 3 — Earn</h3>
+        <p>
+          Use your skill to find opportunities and start generating income.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GUIDES -->
+  <section class="section" id="guides">
+    <h2>EarnPath Guides</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>💼 Freelancing</h3>
+        <p>
+          Learn the basics of freelancing and how beginners can offer services online.
+        </p>
+        <a href="freelancing.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>📱 Affiliate Marketing</h3>
+        <p>
+          Understand affiliate marketing and how beginners can promote useful products.
+        </p>
+        <a href="affiliate-marketing.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Digital Products</h3>
+        <p>
+          Learn how to create simple digital products and sell them online.
+        </p>
+        <a href="digital-products.html" class="button">Read Guide</a>
+      </div>
+
+      <div class="card">
+        <h3>🤖 AI Tools</h3>
+        <p>
+          Discover beginner-friendly ways to use AI tools to learn and work faster.
+        </p>
+        <a href="ai-tools.html" class="button">Read Guide</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RESOURCES -->
+  <section class="section" id="resources">
+    <h2>Recommended Resources</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>💻 Learn Freelancing</h3>
+        <p>
+          Explore useful resources for developing skills and getting started
+          with freelancing.
+        </p>
+        <a href="#" class="button">Explore Resource</a>
+      </div>
+
+      <div class="card">
+        <h3>📱 Learn Affiliate Marketing</h3>
+        <p>
+          Discover beginner-friendly resources for understanding affiliate
+          marketing.
+        </p>
+        <a href="#" class="button">Explore Resource</a>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Create Digital Products</h3>
+        <p>
+          Find tools and resources that can help you create useful digital
+          products.
+        </p>
+        <a href="#" class="button">Explore Resource</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About EarnPath</h2>
+
+    <div class="card">
+      <p>
+        EarnPath is a beginner-friendly platform created to help people
+        discover useful skills, online opportunities, and practical resources
+        for building their future.
+      </p>
+
+      <p>
+        Our goal is simple: help you learn, take action, and discover your
+        own path toward earning online.
+      </p>
+
+      <p>
+        EarnPath does not promise quick or guaranteed income. We focus on
+        useful information, realistic opportunities, and continuous learning.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Contact EarnPath</h2>
+
+    <div class="card contact-box">
+      <p>
+        Have a question, suggestion, or partnership idea?
+        We'd love to hear from you.
+      </p>
+
+      <p>
+        Email us at:
+        <strong>bioabubakarusman@gmail.com</strong>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- DISCLOSURE -->
+  <section class="section" id="disclosure">
+    <h2>Affiliate Disclosure</h2>
+
+    <div class="card">
+      <p>
+        Some links on EarnPath may be affiliate links. If you purchase
+        something through one of these links, EarnPath may receive a
+        commission at no additional cost to you.
+      </p>
+
+      <p>
+        We aim to recommend useful products and services that may provide
+        value to our readers. Always do your own research before making
+        a purchase.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
+  </footer>
+
 </body>
 </html>
-<!-- EarnPath Guides -->
-<section class="section" id="guides">
-  <h2>EarnPath Guides</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <a href="freelancing.html" class="button">Read Guide</a>
-      <p>Learn the basics of freelancing and how beginners can offer services online.</p>
-    </div>
-
-    <div class="card">
-      <a href="affiliate-marketing.html" class="button">Read Guide</a>
-      <p>Understand affiliate marketing and how beginners can promote useful products.</p>
-    </div>
-
-    <div class="card">
-      <a href="digital-products.html" class="button">Read Guide</a>
-      <p>Learn how to create simple digital products and sell them online.</p>
-    </div>
-
-    <div class="card">
-      <a href="ai-tools.html" class="button">Read Guide</a>
-      <p>Discover beginner-friendly ways to use AI tools to learn and work faster.</p>
-    </div>
-
-  </div>
-</section>
-<section class="section" id="resources">
-  <h2>Recommended Resources</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>💻 Learn Freelancing</h3>
-      <p>
-        Explore useful resources for developing skills and getting started
-        with freelancing.
-      </p>
-      <a href="#" class="button">Explore Resource</a>
-    </div>
-
-    <div class="card">
-      <h3>📱 Learn Affiliate Marketing</h3>
-      <p>
-        Discover beginner-friendly resources for understanding affiliate
-        marketing.
-      </p>
-      <a href="#" class="button">Explore Resource</a>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Create Digital Products</h3>
-      <p>
-        Find tools and resources that can help you create useful digital
-        products.
-      </p>
-      <a href="#" class="button">Explore Resource</a>
-    </div>
-
-  
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
-<section class="section" id="about">
-  <h2>About EarnPath</h2>
-
-  <div class="card">
-    <p>
-      EarnPath is a beginner-friendly platform created to help people
-      discover useful skills, online opportunities, and practical resources
-      for building their future.
-    </p>
-
-    <p>
-      Our goal is simple: help you learn, take action, and discover your
-      own path toward earning online.
-    </p>
-
-    <p>
-      EarnPath does not promise quick or guaranteed income. We focus on
-      useful information, realistic opportunities, and continuous learning.
-    </p>
-  </div>
-</section>
