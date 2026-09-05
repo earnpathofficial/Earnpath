@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillUp Hub | EarnPath</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      color: #111827;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      color: #2563eb;
+    }
+
+    .skill-card p {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .learn-btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .learn-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .steps {
+      margin-top: 50px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    .steps h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .steps ol {
+      max-width: 700px;
+      margin: auto;
+      padding-left: 25px;
+    }
+
+    .steps li {
+      margin-bottom: 12px;
+    }
+
+    .cta {
+      margin-top: 45px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      padding: 40px 20px;
+      border-radius: 15px;
+    }
+
+    .cta h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 18px;
+      background: #2563eb;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>EarnPath</h1>
+    <p>Your path to learning, earning, and growing online.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="freelancing.html">Freelancing</a>
+    <a href="affiliate-marketing.html">Affiliate Marketing</a>
+    <a href="ai-tools.html">AI Tools</a>
+    <a href="digital-products.html">Digital Products</a>
+    <a href="skills.html">SkillUp Hub</a>
+  </nav>
+
+  <section class="hero">
+    <h2>🚀 SkillUp Hub</h2>
+    <p>
+      Learn valuable digital skills that can help you become more productive,
+      build opportunities, and start earning online.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section>
+      <div class="section-title">
+        <h2>Learn In-Demand Skills</h2>
+        <p>Choose a skill and start building your knowledge today.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>💻 Web Development</h3>
+          <p>Learn HTML, CSS, JavaScript, and the basics of building websites.</p>
+          <a href="#" class="learn-btn">Start Learning</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>🎨 Graphic Design</h3>
+          <p>Learn how to create attractive graphics, social media designs, and digital content.</p>
+          <a href="#" class="learn-btn">Start Learning</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>✍️ Content Writing</h3>
+          <p>Develop your writing skills for blogs, websites, social media, and businesses.</p>
+          <a href="#" class="learn-btn">Start Learning</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>📱 Social Media Marketing</h3>
+          <p>Learn how to create content, grow audiences, and promote brands online.</p>
+          <a href="#" class="learn-btn">Start Learning</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>🤖 AI Skills</h3>
+          <p>Learn how to use AI tools to improve productivity, creativity, and online work.</p>
+          <a href="ai-tools.html" class="learn-btn">Explore AI Tools</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>📊 Digital Marketing</h3>
+          <p>Understand online marketing strategies, customer engagement, and promotion.</p>
+          <a href="#" class="learn-btn">Start Learning</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>💼 Freelancing</h3>
+          <p>Learn how to build your skills, find clients, and start offering services online.</p>
+          <a href="freelancing.html" class="learn-btn">Explore Freelancing</a>
+        </div>
+
+        <div class="skill-card">
+          <h3>💰 Affiliate Marketing</h3>
+          <p>Learn the basics of promoting products and earning commissions online.</p>
+          <a href="affiliate-marketing.html" class="learn-btn">Learn More</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>📚 How to Start Learning</h2>
+
+      <ol>
+        <li>Choose one skill that interests you.</li>
+        <li>Learn the basics and practice regularly.</li>
+        <li>Create small projects to build experience.</li>
+        <li>Build a portfolio to show what you can do.</li>
+        <li>Use your skill to look for freelance or online opportunities.</li>
+      </ol>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Level Up?</h2>
+      <p>Start with one skill today and keep improving step by step.</p>
+      <a href="index.html">Back to EarnPath</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 EarnPath. Learn. Build. Earn.</p>
+  </footer>
+
+</body>
+</html>
