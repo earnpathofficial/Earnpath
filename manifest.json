@@ -1,0 +1,11 @@
+{
+  "name": "EarnPath",
+  "short_name": "EarnPath",
+  "description": "Learn practical skills, discover online earning opportunities, and grow your income with EarnPath.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#101827",
+  "orientation": "portrait",
+  "icons": []
+}
