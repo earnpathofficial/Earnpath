@@ -4,421 +4,405 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Haven Estates | Find Your Dream Home</title>
+  <title>PrimeHomes — Find Your Perfect Property</title>
 
-  <meta name="description" content="Haven Estates helps you discover beautiful homes, apartments and investment properties.">
+  <meta name="description" content="A premium, modern, and mobile-friendly real estate website for showcasing properties and connecting buyers with property agents.">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #f8f7f4;
-      color: #222;
       line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
+      background: #111827;
+      color: white;
       padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.97);
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 25px;
-      font-weight: 800;
-      color: #173f35;
+      font-size: 24px;
+      font-weight: bold;
     }
 
     .logo span {
-      color: #b28b45;
+      color: #d4a017;
     }
 
     nav a {
-      color: #222;
+      color: white;
       text-decoration: none;
-      margin-left: 25px;
-      font-weight: 600;
+      margin-left: 20px;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: #b28b45;
+      color: #d4a017;
     }
 
     .hero {
-      min-height: 90vh;
-      padding: 150px 7% 80px;
+      min-height: 620px;
+      padding: 100px 7%;
       display: flex;
       align-items: center;
-      color: white;
       background:
-        linear-gradient(rgba(13,35,29,0.72), rgba(13,35,29,0.72)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85")
+        linear-gradient(rgba(17,24,39,0.75), rgba(17,24,39,0.75)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
         center/cover;
+      color: white;
     }
 
     .hero-content {
       max-width: 750px;
     }
 
-    .hero small {
-      text-transform: uppercase;
-      letter-spacing: 3px;
+    .badge {
+      display: inline-block;
+      background: rgba(212,160,23,0.15);
+      border: 1px solid #d4a017;
+      color: #f5d76e;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 14px;
       font-weight: bold;
-      color: #e5c27a;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 1.05;
-      margin: 18px 0;
+      font-size: 55px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #f5d76e;
     }
 
     .hero p {
-      max-width: 620px;
       font-size: 19px;
+      color: #e5e7eb;
       margin-bottom: 30px;
-      color: #eee;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
-      border-radius: 6px;
+      padding: 14px 24px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-right: 10px;
       transition: 0.3s;
     }
 
-    .btn-primary {
-      background: #c49a52;
-      color: white;
+    .primary {
+      background: #d4a017;
+      color: #111827;
     }
 
-    .btn-primary:hover {
+    .primary:hover {
+      background: #f5d76e;
       transform: translateY(-2px);
     }
 
-    .btn-light {
-      background: white;
-      color: #173f35;
-    }
-
-    .search {
-      width: 86%;
-      margin: -45px auto 70px;
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
-      position: relative;
-      z-index: 5;
-    }
-
-    .search h2 {
-      color: #173f35;
-      margin-bottom: 15px;
-    }
-
-    .search-form {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr auto;
-      gap: 12px;
-    }
-
-    .search input,
-    .search select {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background: white;
-    }
-
-    .search button {
-      border: none;
-      border-radius: 6px;
-      padding: 14px 25px;
-      background: #173f35;
+    .secondary {
+      background: transparent;
       color: white;
-      font-weight: bold;
-      cursor: pointer;
+      border: 2px solid white;
+    }
+
+    .secondary:hover {
+      background: white;
+      color: #111827;
     }
 
     section {
       padding: 80px 7%;
     }
 
-    .heading {
+    .section-title {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 700px;
+      margin: 0 auto 50px;
     }
 
-    .heading small {
-      color: #b28b45;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
+    .section-title h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
     }
 
-    .heading h2 {
-      color: #173f35;
-      font-size: 40px;
-      margin: 8px 0;
-    }
-
-    .heading p {
-      color: #666;
+    .section-title p {
+      color: #6b7280;
     }
 
     .properties {
+      background: #f9fafb;
+    }
+
+    .property-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
-    .property {
+    .property-card {
       background: white;
-      border-radius: 12px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
       transition: 0.3s;
     }
 
-    .property:hover {
+    .property-card:hover {
       transform: translateY(-6px);
     }
 
     .property-image {
-      height: 240px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .property-image img {
       width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
     }
 
-    .tag {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: #173f35;
-      color: white;
-      padding: 7px 12px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: bold;
+    .property-info {
+      padding: 23px;
     }
 
-    .property-content {
-      padding: 22px;
-    }
-
-    .property-content h3 {
-      color: #173f35;
-      font-size: 21px;
-      margin-bottom: 6px;
+    .property-info h3 {
+      color: #111827;
+      margin-bottom: 8px;
     }
 
     .location {
-      color: #777;
+      color: #6b7280;
       font-size: 14px;
+      margin-bottom: 12px;
     }
 
     .price {
-      font-size: 23px;
-      color: #b28b45;
-      font-weight: 800;
-      margin: 12px 0;
+      color: #b8860b;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .details {
       display: flex;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
+      margin-bottom: 20px;
+      color: #4b5563;
       font-size: 14px;
-      color: #555;
-      border-top: 1px solid #eee;
-      padding-top: 14px;
     }
 
     .about {
-      background: #173f35;
-      color: white;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 55px;
       align-items: center;
     }
 
     .about-image {
-      min-height: 450px;
-      border-radius: 12px;
-      background:
-        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-    }
-
-    .about small {
-      color: #e5c27a;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: bold;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
 
     .about h2 {
-      font-size: 42px;
-      margin: 12px 0 20px;
-    }
-
-    .about p {
-      color: #d9dfdc;
+      font-size: 36px;
+      color: #111827;
       margin-bottom: 18px;
     }
 
+    .about p {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: #b8860b;
+      margin-right: 10px;
+    }
+
     .stats {
-      display: flex;
-      gap: 35px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .stats strong {
-      display: block;
-      font-size: 28px;
-      color: #e5c27a;
-    }
-
-    .stats span {
-      font-size: 13px;
-      color: #ddd;
-    }
-
-    .why {
-      background: white;
-    }
-
-    .why-grid {
+      background: #111827;
+      color: white;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      text-align: center;
+      gap: 20px;
     }
 
-    .why-card {
-      padding: 30px;
-      border: 1px solid #eee;
-      border-radius: 10px;
+    .stat h3 {
+      font-size: 38px;
+      color: #f5d76e;
+    }
+
+    .stat p {
+      color: #d1d5db;
+    }
+
+    .services {
+      background: #ffffff;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 30px 23px;
+      background: #f9fafb;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .service-card p {
+      color: #6b7280;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
       text-align: center;
     }
 
-    .why-card .icon {
+    .cta h2 {
       font-size: 38px;
       margin-bottom: 15px;
     }
 
-    .why-card h3 {
-      color: #173f35;
-      margin-bottom: 10px;
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #d1d5db;
     }
 
     .contact {
-      background: #f0ede6;
       text-align: center;
     }
 
-    .contact h2 {
-      font-size: 42px;
-      color: #173f35;
-      margin-bottom: 15px;
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+      padding: 35px;
+      background: #f9fafb;
+      border-radius: 15px;
+      border: 1px solid #e5e7eb;
     }
 
-    .contact p {
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto 25px;
+    .contact-box p {
+      margin: 12px 0;
+      color: #4b5563;
     }
 
     footer {
-      background: #102c25;
-      color: white;
-      padding: 35px 7%;
+      background: #0f172a;
+      color: #cbd5e1;
       text-align: center;
-    }
-
-    footer .logo {
-      color: white;
-      margin-bottom: 8px;
-    }
-
-    footer p {
-      color: #bfc9c5;
+      padding: 30px 7%;
       font-size: 14px;
-      margin: 5px 0;
     }
 
-    .creator {
-      margin-top: 12px;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        min-height: 80vh;
-      }
-
-      .search-form {
-        grid-template-columns: 1fr;
-      }
-
-      .properties,
-      .why-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 950px) {
+      .property-grid,
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .about {
         grid-template-columns: 1fr;
       }
+    }
 
-      .about-image {
-        min-height: 300px;
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
       }
 
-      section {
-        padding: 60px 6%;
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 75px 6%;
+        min-height: 560px;
       }
 
       .hero h1 {
-        font-size: 45px;
+        font-size: 40px;
       }
 
-      .contact h2,
-      .about h2,
-      .heading h2 {
-        font-size: 32px;
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 30px;
+      }
+
+      .property-grid,
+      .service-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons .btn {
+        text-align: center;
       }
     }
   </style>
@@ -426,290 +410,301 @@
 
 <body>
 
-<header>
-  <div class="logo">Haven<span>Estates</span></div>
+  <header>
+    <div class="logo">Prime<span>Homes</span></div>
 
-  <nav>
-    <a href="#properties">Properties</a>
-    <a href="#about">About</a>
-    <a href="#why">Why Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="hero">
+  <section class="hero">
+    <div class="hero-content">
 
-  <div class="hero-content">
+      <div class="badge">Trusted Property Solutions</div>
 
-    <small>Premium Real Estate</small>
+      <h1>
+        Find a Place You Can <span>Call Home</span>
+      </h1>
 
-    <h1>Find a home that feels like yours.</h1>
+      <p>
+        Discover beautiful properties, explore new opportunities,
+        and connect with a professional real estate team that can
+        help you make your next move.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#properties">
+          View Properties
+        </a>
+
+        <a class="btn secondary"
+           href="https://wa.me/213675650682"
+           target="_blank">
+          WhatsApp Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="properties" id="properties">
+
+    <div class="section-title">
+      <h2>Featured Properties</h2>
+      <p>
+        Explore a selection of properties available for buyers
+        and investors. These listings are demonstration examples.
+      </p>
+    </div>
+
+    <div class="property-grid">
+
+      <div class="property-card">
+
+        <img
+          class="property-image"
+          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80"
+          alt="Modern luxury house">
+
+        <div class="property-info">
+
+          <h3>Modern Family Home</h3>
+
+          <div class="location">📍 Prime Residential Area</div>
+
+          <div class="price">$250,000</div>
+
+          <div class="details">
+            <span>🛏 4 Beds</span>
+            <span>🛁 3 Baths</span>
+            <span>📐 2,400 sq ft</span>
+          </div>
+
+          <a class="btn primary"
+             href="https://wa.me/213675650682"
+             target="_blank">
+            Enquire Now
+          </a>
+
+        </div>
+      </div>
+
+      <div class="property-card">
+
+        <img
+          class="property-image"
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+          alt="Luxury modern property">
+
+        <div class="property-info">
+
+          <h3>Luxury City Apartment</h3>
+
+          <div class="location">📍 Central City Location</div>
+
+          <div class="price">$185,000</div>
+
+          <div class="details">
+            <span>🛏 3 Beds</span>
+            <span>🛁 2 Baths</span>
+            <span>📐 1,650 sq ft</span>
+          </div>
+
+          <a class="btn primary"
+             href="https://wa.me/213675650682"
+             target="_blank">
+            Enquire Now
+          </a>
+
+        </div>
+      </div>
+
+      <div class="property-card">
+
+        <img
+          class="property-image"
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+          alt="Elegant family property">
+
+        <div class="property-info">
+
+          <h3>Elegant Family Villa</h3>
+
+          <div class="location">📍 Quiet Neighborhood</div>
+
+          <div class="price">$420,000</div>
+
+          <div class="details">
+            <span>🛏 5 Beds</span>
+            <span>🛁 4 Baths</span>
+            <span>📐 3,200 sq ft</span>
+          </div>
+
+          <a class="btn primary"
+             href="https://wa.me/213675650682"
+             target="_blank">
+            Enquire Now
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+
+    <div>
+      <h2>Helping You Make Your Next Move</h2>
+
+      <p>
+        Buying, selling, or investing in property is an important
+        decision. A professional real estate website makes it easier
+        for potential clients to discover properties and contact you.
+      </p>
+
+      <p>
+        PrimeHomes is a ready-made real estate website designed to
+        showcase properties in a clean, professional, and modern way.
+      </p>
+
+      <ul class="checklist">
+        <li>Professional property presentation</li>
+        <li>Mobile-friendly design</li>
+        <li>Clear property information</li>
+        <li>Direct WhatsApp enquiries</li>
+        <li>Easy customization for clients</li>
+      </ul>
+    </div>
+
+    <div>
+      <img
+        class="about-image"
+        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"
+        alt="Luxury modern interior">
+    </div>
+
+  </section>
+
+  <section class="stats">
+
+    <div class="stat">
+      <h3>100%</h3>
+      <p>Mobile Friendly</p>
+    </div>
+
+    <div class="stat">
+      <h3>24/7</h3>
+      <p>Online Property Showcase</p>
+    </div>
+
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Featured Demo Properties</p>
+    </div>
+
+  </section>
+
+  <section class="services" id="services">
+
+    <div class="section-title">
+      <h2>Real Estate Services</h2>
+      <p>
+        A professional layout that can be customized for different
+        real estate businesses and property professionals.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>Property Sales</h3>
+        <p>
+          Showcase homes, apartments, villas, and other properties
+          to potential buyers.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🔑</div>
+        <h3>Property Rentals</h3>
+        <p>
+          Present rental properties with important details and
+          simple contact options.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">📈</div>
+        <h3>Property Investment</h3>
+        <p>
+          Create a professional online presence for property
+          investment opportunities.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+
+    <h2>Ready to Find Your Next Property?</h2>
 
     <p>
-      Discover exceptional homes, apartments and investment properties
-      in some of the most desirable locations.
+      Contact us today to learn more about available properties
+      or schedule a viewing.
     </p>
 
-    <a href="#properties" class="btn btn-primary">
-      Explore Properties
+    <a class="btn primary"
+       href="https://wa.me/213675650682"
+       target="_blank">
+      Contact Us on WhatsApp
     </a>
 
-    <a href="#contact" class="btn btn-light">
-      Talk to an Agent
-    </a>
+  </section>
 
-  </div>
+  <section class="contact" id="contact">
 
-</section>
-
-<div class="search">
-
-  <h2>Find Your Perfect Property</h2>
-
-  <div class="search-form">
-
-    <input type="text" placeholder="Enter location">
-
-    <select>
-      <option>Property Type</option>
-      <option>House</option>
-      <option>Apartment</option>
-      <option>Villa</option>
-      <option>Land</option>
-    </select>
-
-    <select>
-      <option>Price Range</option>
-      <option>Under $50,000</option>
-      <option>$50,000 - $100,000</option>
-      <option>$100,000 - $250,000</option>
-      <option>$250,000+</option>
-    </select>
-
-    <button onclick="searchProperty()">Search</button>
-
-  </div>
-
-</div>
-
-<section id="properties">
-
-  <div class="heading">
-    <small>Our Collection</small>
-    <h2>Featured Properties</h2>
-    <p>
-      Explore homes selected for comfort, quality and investment value.
-    </p>
-  </div>
-
-  <div class="properties">
-
-    <div class="property">
-
-      <div class="property-image">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
-          alt="Modern luxury home">
-        <span class="tag">FOR SALE</span>
-      </div>
-
-      <div class="property-content">
-        <h3>Modern Luxury Villa</h3>
-        <p class="location">📍 Lekki, Lagos</p>
-        <div class="price">$250,000</div>
-
-        <div class="details">
-          <span>🛏 5 Beds</span>
-          <span>🛁 4 Baths</span>
-          <span>🚗 2 Cars</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="property">
-
-      <div class="property-image">
-        <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
-          alt="Luxury apartment">
-        <span class="tag">FOR SALE</span>
-      </div>
-
-      <div class="property-content">
-        <h3>Luxury City Apartment</h3>
-        <p class="location">📍 Abuja, Nigeria</p>
-        <div class="price">$145,000</div>
-
-        <div class="details">
-          <span>🛏 3 Beds</span>
-          <span>🛁 2 Baths</span>
-          <span>🚗 1 Car</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="property">
-
-      <div class="property-image">
-        <img
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
-          alt="Beautiful family house">
-        <span class="tag">FOR RENT</span>
-      </div>
-
-      <div class="property-content">
-        <h3>Contemporary Family Home</h3>
-        <p class="location">📍 Victoria Island, Lagos</p>
-        <div class="price">$3,500 / month</div>
-
-        <div class="details">
-          <span>🛏 4 Beds</span>
-          <span>🛁 3 Baths</span>
-          <span>🚗 2 Cars</span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="about" id="about">
-
-  <div class="about-image"></div>
-
-  <div>
-
-    <small>About Haven Estates</small>
-
-    <h2>Property decisions made easier.</h2>
-
-    <p>
-      Haven Estates helps buyers, sellers and investors discover
-      exceptional property opportunities with confidence.
-    </p>
-
-    <p>
-      From your first viewing to the final decision, our team focuses
-      on making your real-estate journey simple and professional.
-    </p>
-
-    <div class="stats">
-
-      <div>
-        <strong>250+</strong>
-        <span>Properties</span>
-      </div>
-
-      <div>
-        <strong>12+</strong>
-        <span>Locations</span>
-      </div>
-
-      <div>
-        <strong>8+</strong>
-        <span>Years Experience</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="why" id="why">
-
-  <div class="heading">
-
-    <small>Why Choose Us</small>
-
-    <h2>A better way to find property.</h2>
-
-    <p>
-      Professional service from search to closing.
-    </p>
-
-  </div>
-
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="icon">🏡</div>
-      <h3>Quality Homes</h3>
+    <div class="section-title">
+      <h2>Contact PrimeHomes</h2>
       <p>
-        Carefully selected properties that meet high standards.
+        Interested in a property or want to learn more?
+        Get in touch with us.
       </p>
     </div>
 
-    <div class="why-card">
-      <div class="icon">🤝</div>
-      <h3>Expert Guidance</h3>
-      <p>
-        Get professional support throughout your property journey.
-      </p>
+    <div class="contact-box">
+
+      <p>📱 WhatsApp: +213 675 65 06 82</p>
+
+      <p>📧 Email: your@email.com</p>
+
+      <p>📍 Location: Your City</p>
+
+      <br>
+
+      <a class="btn primary"
+         href="https://wa.me/213675650682"
+         target="_blank">
+        Message Us
+      </a>
+
     </div>
 
-    <div class="why-card">
-      <div class="icon">🔑</div>
-      <h3>Easy Process</h3>
-      <p>
-        Simple communication and a straightforward buying experience.
-      </p>
-    </div>
+  </section>
 
-  </div>
+  <footer>
 
-</section>
+    <p>© 2026 PrimeHomes. All rights reserved.</p>
 
-<section class="contact" id="contact">
+    <p>Professional real estate website demo.</p>
 
-  <h2>Ready to find your next property?</h2>
-
-  <p>
-    Speak with a property specialist today and discover
-    opportunities that match your goals.
-  </p>
-
-  <a
-    href="https://wa.me/2340000000000"
-    class="btn btn-primary">
-    💬 Chat on WhatsApp
-  </a>
-
-</section>
-
-<footer>
-
-  <div class="logo">Haven<span>Estates</span></div>
-
-  <p>
-    Premium homes • Property investment • Real estate
-  </p>
-
-  <p>
-    © 2026 Haven Estates. All rights reserved.
-  </p>
-
-  <p class="creator">
-    Website demo created by Abubakar Usman
-  </p>
-
-</footer>
-
-<script>
-
-function searchProperty() {
-
-  alert(
-    "Thanks! The property search feature can be connected to the client's real property listings."
-  );
-
-}
-
-</script>
+  </footer>
 
 </body>
 </html>
