@@ -6,7 +6,10 @@
 
 <title>EarnPath — Learn. Earn. Grow.</title>
 
-<meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, and grow their income.">
+<meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products and ready-made websites.">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#101827">
 
 <style>
 *{
@@ -53,7 +56,6 @@ button{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
 }
 
 .logo{
@@ -90,8 +92,6 @@ button{
   color:white;
   border-radius:24px;
   padding:35px 25px;
-  overflow:hidden;
-  position:relative;
 }
 
 .hero h1{
@@ -156,7 +156,6 @@ button{
   outline:0;
   padding:13px;
   font-size:15px;
-  background:transparent;
 }
 
 .search-box button{
@@ -201,9 +200,6 @@ section{
 }
 
 .section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
   margin-bottom:15px;
 }
 
@@ -265,32 +261,6 @@ section{
   font-size:14px;
 }
 
-/* FEATURE */
-.feature{
-  background:white;
-  border-radius:21px;
-  padding:22px;
-  box-shadow:0 6px 22px rgba(0,0,0,.06);
-}
-
-.feature-content{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.badge{
-  display:inline-block;
-  background:#eafaf2;
-  color:#0c8f50;
-  padding:6px 10px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
 /* PRODUCT */
 .product{
   background:#101827;
@@ -305,10 +275,10 @@ section{
   margin:10px 0 18px;
 }
 
-/* WEBSITE CARDS */
+/* WEBSITE */
 .website-card{
-  overflow:hidden;
   padding:0;
+  overflow:hidden;
 }
 
 .website-top{
@@ -368,14 +338,13 @@ footer{
   z-index:2000;
   background:white;
   border-top:1px solid #e7eaf0;
-  display:flex;
-  justify-content:center;
   box-shadow:0 -5px 20px rgba(0,0,0,.08);
 }
 
 .nav-inner{
   width:100%;
   max-width:650px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(5,1fr);
 }
@@ -401,7 +370,6 @@ footer{
   font-weight:bold;
 }
 
-/* SEARCH RESULTS */
 .hidden{
   display:none !important;
 }
@@ -420,6 +388,7 @@ footer{
 }
 
 @media(max-width:560px){
+
   .container{
     padding:14px;
   }
@@ -441,14 +410,6 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .feature-content{
-    display:block;
-  }
-
-  .feature-content .btn{
-    margin-top:15px;
-  }
-
   .section-title h2{
     font-size:22px;
   }
@@ -461,16 +422,16 @@ footer{
 <header class="header">
   <div class="header-inner">
     <div class="logo">Earn<span>Path</span></div>
-    <div class="profile">EU</div>
+    <div class="profile">EP</div>
   </div>
 </header>
 
 <main class="container">
 
-<!-- HOME -->
 <section id="top">
 
   <div class="hero">
+
     <h1>Learn. <span>Earn.</span> Grow.</h1>
 
     <p>
@@ -480,24 +441,36 @@ footer{
     </p>
 
     <div class="hero-buttons">
-      <a href="#earn" class="btn btn-primary">Start Earning</a>
-      <a href="#learn" class="btn btn-light">Start Learning</a>
+
+      <a href="#earn" class="btn btn-primary">
+        Start Earning
+      </a>
+
+      <a href="#learn" class="btn btn-light">
+        Start Learning
+      </a>
+
     </div>
+
   </div>
 
   <div class="search-box">
+
     <input
       type="text"
       id="searchInput"
       placeholder="Search EarnPath..."
       onkeyup="searchContent()"
     >
+
     <button onclick="searchContent()">🔎</button>
+
   </div>
 
   <div id="searchMessage"></div>
 
   <div class="stats">
+
     <div class="stat">
       <strong>💰</strong>
       <span>Earn Online</span>
@@ -512,155 +485,245 @@ footer{
       <strong>🌐</strong>
       <span>Websites</span>
     </div>
+
   </div>
 
 </section>
 
 
-<!-- EARN -->
 <section id="earn">
 
   <div class="section-title">
-    <div>
-      <h2>💰 Ways to Earn</h2>
-      <p>Explore practical online opportunities.</p>
-    </div>
+    <h2>💰 Ways to Earn</h2>
+    <p>Explore practical online opportunities.</p>
   </div>
 
   <div class="grid">
 
     <div class="card searchable">
+
       <div class="icon">💻</div>
+
       <h3>Freelancing</h3>
-      <p>Learn how to offer useful services and find clients online.</p>
-      <a class="card-link" href="freelancing.html">Explore →</a>
+
+      <p>
+        Learn how to offer useful services
+        and find clients online.
+      </p>
+
+      <a class="card-link" href="freelancing.html">
+        Explore →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">📢</div>
+
       <h3>Affiliate Marketing</h3>
-      <p>Learn how to promote products and earn commissions.</p>
-      <a class="card-link" href="affiliate-marketing.html">Explore →</a>
+
+      <p>
+        Learn how to promote products
+        and earn commissions.
+      </p>
+
+      <a class="card-link" href="affiliate-marketing.html">
+        Explore →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">📦</div>
+
       <h3>Digital Products</h3>
-      <p>Create and sell digital products online.</p>
-      <a class="card-link" href="digital-products.html">Explore →</a>
+
+      <p>
+        Create and sell digital products online.
+      </p>
+
+      <a class="card-link" href="digital-products.html">
+        Explore →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">📱</div>
+
       <h3>Social Media</h3>
-      <p>Discover ways to use social platforms to build an audience.</p>
-      <a class="card-link" href="facebook-business.html">Explore →</a>
+
+      <p>
+        Discover ways to use social platforms
+        to build an audience.
+      </p>
+
+      <a class="card-link" href="facebook-business.html">
+        Explore →
+      </a>
+
     </div>
 
   </div>
+
 </section>
 
 
-<!-- LEARN -->
 <section id="learn">
 
   <div class="section-title">
-    <div>
-      <h2>📚 Learn Skills</h2>
-      <p>Build practical skills for the digital economy.</p>
-    </div>
+
+    <h2>📚 Learn Skills</h2>
+
+    <p>
+      Build practical skills for the digital economy.
+    </p>
+
   </div>
 
   <div class="grid">
 
     <div class="card searchable">
+
       <div class="icon">🧠</div>
+
       <h3>Digital Skills</h3>
-      <p>Start developing skills you can use to create online opportunities.</p>
-      <a class="card-link" href="skills.html">Learn More →</a>
+
+      <p>
+        Start developing skills you can use
+        to create online opportunities.
+      </p>
+
+      <a class="card-link" href="skills.html">
+        Learn More →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">🤖</div>
+
       <h3>AI Tools</h3>
-      <p>Discover useful AI tools and ways they can improve your workflow.</p>
-      <a class="card-link" href="ai-tools.html">Learn More →</a>
+
+      <p>
+        Discover useful AI tools and ways
+        they can improve your workflow.
+      </p>
+
+      <a class="card-link" href="ai-tools.html">
+        Learn More →
+      </a>
+
     </div>
 
   </div>
+
 </section>
 
 
-<!-- WEBSITES -->
 <section id="websites">
 
   <div class="section-title">
-    <div>
-      <h2>🌐 Websites for Sale</h2>
-      <p>Ready-made website templates for businesses and creators.</p>
-    </div>
+
+    <h2>🌐 Websites for Sale</h2>
+
+    <p>
+      Ready-made website templates for businesses
+      and creators.
+    </p>
+
   </div>
 
   <div class="grid">
 
     <div class="card website-card searchable">
+
       <div class="website-top">👗</div>
 
       <div class="website-body">
+
         <h3>Fashion Website</h3>
-        <p>Modern website concept for fashion brands, boutiques and clothing businesses.</p>
+
+        <p>
+          Modern website concept for fashion brands,
+          boutiques and clothing businesses.
+        </p>
 
         <a href="fashion.html" class="btn btn-primary">
           View Website
         </a>
+
       </div>
+
     </div>
 
 
     <div class="card website-card searchable">
+
       <div class="website-top">🏠</div>
 
       <div class="website-body">
+
         <h3>Real Estate Website</h3>
-        <p>Professional landing page concept for property businesses and real estate agents.</p>
+
+        <p>
+          Professional landing page concept for
+          property businesses and real estate agents.
+        </p>
 
         <a href="real-estate.html" class="btn btn-primary">
           View Website
         </a>
+
       </div>
+
     </div>
 
 
     <div class="card website-card searchable">
+
       <div class="website-top">📈</div>
 
       <div class="website-body">
+
         <h3>Facebook Business</h3>
-        <p>Business-focused website concept designed for online brands and social media businesses.</p>
+
+        <p>
+          Business-focused website concept designed
+          for online brands and social media businesses.
+        </p>
 
         <a href="facebook-business.html" class="btn btn-primary">
           View Website
         </a>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
 
 
-<!-- FEATURED PRODUCT -->
 <section id="product">
 
   <div class="product searchable">
 
-    <span class="badge">⭐ Featured Product</span>
-
-    <h2>EarnPath Beginner Guide</h2>
+    <h2>⭐ EarnPath Beginner Guide</h2>
 
     <p>
-      A beginner-friendly digital resource designed to help
-      you understand online earning, digital skills and
-      practical ways to start.
+      A beginner-friendly digital resource designed
+      to help you understand online earning,
+      digital skills and practical ways to start.
     </p>
 
     <a
@@ -676,37 +739,71 @@ footer{
 </section>
 
 
-<!-- GUIDES -->
 <section id="guides">
 
   <div class="section-title">
-    <div>
-      <h2>📖 Guides</h2>
-      <p>Simple resources for getting started.</p>
-    </div>
+
+    <h2>📖 Guides</h2>
+
+    <p>
+      Simple resources for getting started.
+    </p>
+
   </div>
 
   <div class="grid">
 
     <div class="card searchable">
+
       <div class="icon">🚀</div>
+
       <h3>Start Freelancing</h3>
-      <p>Understand the basics of building a freelancing profile and finding opportunities.</p>
-      <a class="card-link" href="freelancing.html">Open Guide →</a>
+
+      <p>
+        Understand the basics of building
+        a freelancing profile and finding opportunities.
+      </p>
+
+      <a class="card-link" href="freelancing.html">
+        Open Guide →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">💡</div>
+
       <h3>Build Digital Products</h3>
-      <p>Learn the basic process of creating and selling digital products.</p>
-      <a class="card-link" href="digital-products.html">Open Guide →</a>
+
+      <p>
+        Learn the basic process of creating
+        and selling digital products.
+      </p>
+
+      <a class="card-link" href="digital-products.html">
+        Open Guide →
+      </a>
+
     </div>
 
+
     <div class="card searchable">
+
       <div class="icon">🤖</div>
+
       <h3>Use AI Tools</h3>
-      <p>Explore practical AI tools that can help with digital work.</p>
-      <a class="card-link" href="ai-tools.html">Open Guide →</a>
+
+      <p>
+        Explore practical AI tools that
+        can help with digital work.
+      </p>
+
+      <a class="card-link" href="ai-tools.html">
+        Open Guide →
+      </a>
+
     </div>
 
   </div>
@@ -714,31 +811,32 @@ footer{
 </section>
 
 
-<!-- ABOUT -->
 <section id="about">
 
   <div class="about">
+
     <h2>👋 About EarnPath</h2>
 
     <p>
-      EarnPath is built to help beginners discover practical
-      digital skills, online earning opportunities and useful
-      resources in one simple place.
+      EarnPath is built to help beginners discover
+      practical digital skills, online earning opportunities
+      and useful resources in one simple place.
     </p>
 
     <p>
-      The platform also provides ready-made website templates
-      for businesses, creators and entrepreneurs.
+      The platform also provides ready-made website
+      templates for businesses, creators and entrepreneurs.
     </p>
+
   </div>
 
 </section>
 
 
-<!-- CONTACT -->
 <section id="contact">
 
   <div class="contact">
+
     <h2>📩 Contact EarnPath</h2>
 
     <p>
@@ -752,15 +850,16 @@ footer{
     >
       Contact Us
     </a>
+
   </div>
 
 </section>
 
 
-<!-- DISCLOSURE -->
 <section id="disclosure">
 
   <div class="about">
+
     <h2>Affiliate Disclosure</h2>
 
     <p>
@@ -769,6 +868,7 @@ footer{
       EarnPath may receive a commission at no additional
       cost to you.
     </p>
+
   </div>
 
 </section>
@@ -781,32 +881,46 @@ footer{
 </footer>
 
 
-<!-- BOTTOM NAVIGATION -->
 <nav class="bottom-nav">
 
   <div class="nav-inner">
 
-    <button class="nav-btn active" onclick="goTo('top', this)">
+    <button
+      class="nav-btn active"
+      onclick="goTo('top', this)"
+    >
       <span>🏠</span>
       Home
     </button>
 
-    <button class="nav-btn" onclick="goTo('learn', this)">
+    <button
+      class="nav-btn"
+      onclick="goTo('learn', this)"
+    >
       <span>📚</span>
       Learn
     </button>
 
-    <button class="nav-btn" onclick="goTo('earn', this)">
+    <button
+      class="nav-btn"
+      onclick="goTo('earn', this)"
+    >
       <span>💰</span>
       Earn
     </button>
 
-    <button class="nav-btn" onclick="goTo('websites', this)">
+    <button
+      class="nav-btn"
+      onclick="goTo('websites', this)"
+    >
       <span>🌐</span>
       Websites
     </button>
 
-    <button class="nav-btn" onclick="goTo('product', this)">
+    <button
+      class="nav-btn"
+      onclick="goTo('product', this)"
+    >
       <span>🛒</span>
       Product
     </button>
@@ -823,47 +937,64 @@ function goTo(sectionId, button){
   const section = document.getElementById(sectionId);
 
   if(section){
+
     section.scrollIntoView({
       behavior:"smooth"
     });
+
   }
 
-  document.querySelectorAll(".nav-btn").forEach(function(btn){
-    btn.classList.remove("active");
-  });
+  document
+    .querySelectorAll(".nav-btn")
+    .forEach(function(btn){
+
+      btn.classList.remove("active");
+
+    });
 
   if(button){
+
     button.classList.add("active");
+
   }
+
 }
 
 
 function searchContent(){
 
-  const input = document.getElementById("searchInput");
+  const input =
+    document.getElementById("searchInput");
 
-  const query = input.value.toLowerCase().trim();
+  const query =
+    input.value.toLowerCase().trim();
 
-  const cards = document.querySelectorAll(".searchable");
+  const cards =
+    document.querySelectorAll(".searchable");
 
-  const message = document.getElementById("searchMessage");
+  const message =
+    document.getElementById("searchMessage");
 
   if(query === ""){
 
     cards.forEach(function(card){
+
       card.classList.remove("hidden");
+
     });
 
     message.textContent = "";
 
     return;
+
   }
 
   let found = 0;
 
   cards.forEach(function(card){
 
-    const text = card.textContent.toLowerCase();
+    const text =
+      card.textContent.toLowerCase();
 
     if(text.includes(query)){
 
@@ -881,13 +1012,45 @@ function searchContent(){
 
   if(found === 0){
 
-    message.textContent = "No results found. Try another search.";
+    message.textContent =
+      "No results found. Try another search.";
 
   }else{
 
-    message.textContent = found + " result(s) found.";
+    message.textContent =
+      found + " result(s) found.";
 
   }
+
+}
+
+
+/* EarnPath PWA */
+
+if("serviceWorker" in navigator){
+
+  window.addEventListener("load", function(){
+
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then(function(){
+
+        console.log(
+          "EarnPath app is ready"
+        );
+
+      })
+      .catch(function(error){
+
+        console.log(
+          "Service worker registration failed:",
+          error
+        );
+
+      });
+
+  });
+
 }
 
 </script>
