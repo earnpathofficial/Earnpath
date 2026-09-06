@@ -4,184 +4,372 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SocialBoost - Grow Your Business on Facebook</title>
+  <title>SocialBoost — Grow Your Business Online</title>
 
-  <meta name="description" content="A professional Facebook business landing page for showcasing services, products, and social media presence.">
+  <meta name="description" content="A professional Facebook and social media business website designed to help businesses build their online presence and attract more customers.">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
       line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
     }
 
     header {
-      background: #1877f2;
+      background: #111827;
       color: white;
       padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 24px;
       font-weight: bold;
     }
 
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+    .logo span {
+      color: #60a5fa;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
     }
 
     .hero {
-      background: white;
-      text-align: center;
-      padding: 85px 20px;
+      min-height: 620px;
+      padding: 100px 7%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 45px;
-      margin-bottom: 18px;
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      color: #111827;
     }
 
     .hero h1 span {
-      color: #1877f2;
+      color: #2563eb;
     }
 
     .hero p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-      color: #667085;
-      font-size: 18px;
+      font-size: 19px;
+      color: #4b5563;
+      margin-bottom: 30px;
+      max-width: 620px;
     }
 
-    .button {
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-block;
-      background: #1877f2;
-      color: white;
-      padding: 14px 25px;
+      padding: 14px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px;
+      transition: 0.3s;
     }
 
-    .button:hover {
-      opacity: 0.9;
+    .primary {
+      background: #2563eb;
+      color: white;
     }
 
-    .button.secondary {
-      background: #111827;
+    .primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
     }
 
-    .section {
-      padding: 65px 7%;
+    .secondary {
+      background: white;
+      color: #2563eb;
+      border: 2px solid #2563eb;
     }
 
-    .section h2 {
+    .secondary:hover {
+      background: #eff6ff;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 35px;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .services {
+      background: #f9fafb;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
     }
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      padding: 30px 22px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .icon {
+      font-size: 36px;
+      margin-bottom: 18px;
     }
 
     .card h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      color: #111827;
     }
 
     .card p {
-      color: #667085;
-      margin-bottom: 15px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 36px;
+      margin-bottom: 18px;
+      color: #111827;
+    }
+
+    .about p {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: #2563eb;
+      margin-right: 10px;
+    }
+
+    .stats {
+      background: #111827;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      gap: 20px;
+    }
+
+    .stat h3 {
+      font-size: 38px;
+      color: #60a5fa;
+    }
+
+    .stat p {
+      color: #d1d5db;
+    }
+
+    .testimonials {
+      background: #f9fafb;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-card strong {
+      color: #111827;
     }
 
     .cta {
-      background: #eaf3ff;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
       text-align: center;
-      padding: 70px 20px;
     }
 
     .cta h2 {
-      font-size: 34px;
+      font-size: 38px;
       margin-bottom: 15px;
     }
 
     .cta p {
       max-width: 650px;
       margin: 0 auto 25px;
-      color: #667085;
+      color: #dbeafe;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #1d4ed8;
     }
 
     .contact {
-      max-width: 700px;
-      margin: auto;
       text-align: center;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+      padding: 35px;
+      background: #f9fafb;
+      border-radius: 15px;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      color: #4b5563;
     }
 
     footer {
-      background: #111827;
-      color: white;
+      background: #0f172a;
+      color: #cbd5e1;
       text-align: center;
-      padding: 30px 15px;
+      padding: 30px 7%;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        text-align: center;
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      nav {
-        justify-content: center;
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
       }
 
       .hero {
-        padding: 60px 20px;
+        padding: 75px 6%;
+        min-height: 550px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 39px;
       }
 
-      .section {
-        padding: 50px 20px;
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 30px;
       }
 
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .button {
-        width: 100%;
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons .btn {
         text-align: center;
-        margin: 5px 0;
       }
     }
   </style>
@@ -189,9 +377,8 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <div class="logo">SocialBoost</div>
+    <div class="logo">Social<span>Boost</span></div>
 
     <nav>
       <a href="#services">Services</a>
@@ -200,130 +387,244 @@
     </nav>
   </header>
 
-
-  <!-- HERO -->
   <section class="hero">
-    <h1>Grow Your Business <span>Online</span></h1>
+    <div class="hero-content">
 
-    <p>
-      A professional landing page designed to help businesses showcase
-      their services, connect with customers, and grow their online presence.
-    </p>
+      <div class="badge">Professional Business Website</div>
 
-    <a href="#services" class="button">Explore Services</a>
+      <h1>
+        Grow Your Business <span>Online</span>
+      </h1>
 
-    <a href="#contact" class="button secondary">Contact Us</a>
+      <p>
+        Build a stronger online presence, connect with your customers,
+        and turn your social media audience into real business opportunities.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary"
+           href="https://wa.me/213675650682"
+           target="_blank">
+          Chat on WhatsApp
+        </a>
+
+        <a class="btn secondary" href="#services">
+          Explore Services
+        </a>
+      </div>
+
+    </div>
   </section>
 
+  <section class="services" id="services">
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-
-    <h2>What We Offer</h2>
+    <div class="section-title">
+      <h2>What We Can Help With</h2>
+      <p>
+        Simple digital solutions designed to help your business look
+        professional and reach more customers.
+      </p>
+    </div>
 
     <div class="cards">
 
       <div class="card">
-        <h3>📱 Social Media Marketing</h3>
+        <div class="icon">📱</div>
+        <h3>Social Media Marketing</h3>
         <p>
-          Promote your business and reach potential customers through
-          effective social media strategies.
+          Improve your social media presence and create content that
+          helps your business connect with potential customers.
         </p>
       </div>
 
       <div class="card">
-        <h3>📣 Business Promotion</h3>
+        <div class="icon">📣</div>
+        <h3>Business Promotion</h3>
         <p>
-          Showcase your products and services with professional online
-          content designed to attract attention.
+          Promote your products and services with clear messaging
+          and professional online presentation.
         </p>
       </div>
 
       <div class="card">
-        <h3>🎨 Content Creation</h3>
+        <div class="icon">🎨</div>
+        <h3>Content Creation</h3>
         <p>
-          Create engaging posts, graphics, and promotional content for
-          your business and social media audience.
+          Create useful and engaging content that keeps your audience
+          interested in your brand.
         </p>
       </div>
 
       <div class="card">
-        <h3>🚀 Online Growth</h3>
+        <div class="icon">🚀</div>
+        <h3>Online Growth</h3>
         <p>
-          Build a stronger online presence and make it easier for customers
-          to discover and contact your business.
+          Build a stronger digital foundation and make it easier
+          for customers to discover and contact your business.
         </p>
       </div>
 
     </div>
   </section>
 
+  <section class="about" id="about">
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
+    <div>
+      <h2>Make Your Business Look Professional Online</h2>
 
-    <h2>About Our Business</h2>
+      <p>
+        Your website is often one of the first places customers
+        learn about your business. A clean and professional website
+        can help create trust and make your business easier to discover.
+      </p>
+
+      <p>
+        SocialBoost is designed as a flexible business website that
+        can be customized for different businesses and brands.
+      </p>
+
+      <ul class="checklist">
+        <li>Mobile-friendly design</li>
+        <li>Professional business layout</li>
+        <li>Clear service presentation</li>
+        <li>WhatsApp customer contact</li>
+        <li>Social media integration</li>
+      </ul>
+    </div>
 
     <div class="card">
+      <div class="icon">💼</div>
+      <h3>Built For Businesses</h3>
 
       <p>
-        We help businesses build a professional online presence and
-        connect with customers through modern digital marketing.
+        This website can be customized for restaurants, fashion brands,
+        freelancers, real estate businesses, online stores, coaches,
+        local businesses, and many other types of businesses.
       </p>
 
-      <p>
-        This website is designed as a simple starting point for businesses
-        that want to showcase what they offer online.
-      </p>
+      <br>
 
+      <a class="btn primary"
+         href="https://wa.me/213675650682"
+         target="_blank">
+        Start a Conversation
+      </a>
     </div>
+
   </section>
 
+  <section class="stats">
 
-  <!-- CTA -->
+    <div class="stat">
+      <h3>100%</h3>
+      <p>Mobile Friendly</p>
+    </div>
+
+    <div class="stat">
+      <h3>24/7</h3>
+      <p>Online Presence</p>
+    </div>
+
+    <div class="stat">
+      <h3>1</h3>
+      <p>Professional Website</p>
+    </div>
+
+  </section>
+
+  <section class="testimonials">
+
+    <div class="section-title">
+      <h2>What Clients Could Say</h2>
+      <p>Sample testimonials for this demo website.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="testimonial-card">
+        <p>
+          "The website gives our business a much more professional
+          online presence and makes it easier for customers to contact us."
+        </p>
+        <strong>— Business Owner</strong>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "I love how simple and clean the website is. Customers
+          can quickly understand what we offer."
+        </p>
+        <strong>— Small Business Owner</strong>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "The WhatsApp button makes it very easy for customers
+          to reach us directly."
+        </p>
+        <strong>— Entrepreneur</strong>
+      </div>
+
+    </div>
+
+  </section>
+
   <section class="cta">
 
     <h2>Ready to Grow Your Business?</h2>
 
     <p>
-      Make it easier for customers to discover your services and get
-      in touch with you.
+      Let's create a professional online presence that helps
+      your business connect with more customers.
     </p>
 
-    <a href="#contact" class="button">Get Started</a>
+    <a class="btn"
+       href="https://wa.me/213675650682"
+       target="_blank">
+      Contact Us on WhatsApp
+    </a>
 
   </section>
 
+  <section class="contact" id="contact">
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-
-    <h2>Contact Us</h2>
-
-    <div class="card contact">
-
+    <div class="section-title">
+      <h2>Get In Touch</h2>
       <p>
-        Interested in our services or want to learn more?
+        Have a question or want to customize this website for your business?
+        Send us a message.
       </p>
+    </div>
 
-      <p>
-        Email:
-        <strong>your@email.com</strong>
-      </p>
+    <div class="contact-box">
 
-      <a href="#" class="button">
-        Visit Our Facebook Page
+      <p>📱 WhatsApp: +213 675 65 06 82</p>
+
+      <p>📧 Email: your@email.com</p>
+
+      <p>📘 Facebook: Your Facebook Page</p>
+
+      <br>
+
+      <a class="btn primary"
+         href="https://wa.me/213675650682"
+         target="_blank">
+        Message Us
       </a>
 
     </div>
 
   </section>
 
-
-  <!-- FOOTER -->
   <footer>
 
-    <p>© 2026 SocialBoost. All rights reserved.</p>
+    <p>
+      © 2026 SocialBoost. All rights reserved.
+    </p>
+
+    <p>
+      Professional websites for modern businesses.
+    </p>
 
   </footer>
 
