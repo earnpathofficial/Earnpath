@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PrimeNest Realty | Find Your Dream Home</title>
+
+  <meta name="description" content="PrimeNest Realty helps you discover beautiful homes and properties in great locations.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #123c69;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 90px 7%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #123c69, #1d6fa5);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      background: white;
+      color: #123c69;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn-dark {
+      background: #0b2948;
+      color: white;
+    }
+
+    .search-box {
+      background: white;
+      width: 86%;
+      margin: -45px auto 60px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 5;
+    }
+
+    .search-box h2 {
+      margin-bottom: 15px;
+      color: #123c69;
+    }
+
+    .search-fields {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-fields input,
+    .search-fields select {
+      flex: 1;
+      min-width: 180px;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 7px;
+    }
+
+    .search-fields button {
+      padding: 14px 25px;
+      border: none;
+      border-radius: 7px;
+      background: #123c69;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      color: #123c69;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .property {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    .property-image {
+      height: 210px;
+      background: linear-gradient(135deg, #b9d7ea, #e8f1f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    .property-info {
+      padding: 20px;
+    }
+
+    .property-info h3 {
+      color: #123c69;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .property-info a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #123c69;
+      font-weight: bold;
+    }
+
+    .features {
+      background: #ffffff;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .feature {
+      padding: 30px 20px;
+      border-radius: 10px;
+      background: #f7f8fa;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #123c69;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #0b2948;
+      color: white;
+      padding: 30px 7%;
+      text-align: center;
+    }
+
+    footer p {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .properties,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">PrimeNest Realty</div>
+
+    <nav>
+      <a href="#properties">Properties</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find a Place You'll Love to Call Home.</h1>
+
+      <p>
+        Discover beautiful homes, apartments, and investment properties
+        in locations that fit your lifestyle and budget.
+      </p>
+
+      <a href="#properties" class="btn">View Properties</a>
+      <a href="#contact" class="btn btn-dark">Contact Us</a>
+    </div>
+  </section>
+
+  <div class="search-box">
+    <h2>Find Your Perfect Property</h2>
+
+    <div class="search-fields">
+      <input type="text" placeholder="Location">
+
+      <select>
+        <option>Property Type</option>
+        <option>Apartment</option>
+        <option>House</option>
+        <option>Villa</option>
+        <option>Land</option>
+      </select>
+
+      <select>
+        <option>Price Range</option>
+        <option>Under $50,000</option>
+        <option>$50,000 - $100,000</option>
+        <option>$100,000 - $250,000</option>
+        <option>$250,000+</option>
+      </select>
+
+      <button onclick="searchProperty()">Search</button>
+    </div>
+  </div>
+
+  <section id="properties">
+
+    <div class="section-title">
+      <h2>Featured Properties</h2>
+      <p>Explore some of our featured homes and investment opportunities.</p>
+    </div>
+
+    <div class="properties">
+
+      <div class="property">
+        <div class="property-image">🏡</div>
+
+        <div class="property-info">
+          <h3>Modern Family Home</h3>
+          <p>📍 Lekki, Lagos</p>
+          <div class="price">$120,000</div>
+          <p>4 Bedrooms • 3 Bathrooms • 2 Parking Spaces</p>
+          <a href="#contact">View Details →</a>
+        </div>
+      </div>
+
+      <div class="property">
+        <div class="property-image">🏢</div>
+
+        <div class="property-info">
+          <h3>Luxury City Apartment</h3>
+          <p>📍 Abuja, Nigeria</p>
+          <div class="price">$95,000</div>
+          <p>3 Bedrooms • 2 Bathrooms • City View</p>
+          <a href="#contact">View Details →</a>
+        </div>
+      </div>
+
+      <div class="property">
+        <div class="property-image">🏘️</div>
+
+        <div class="property-info">
+          <h3>Premium Villa</h3>
+          <p>📍 Victoria Island, Lagos</p>
+          <div class="price">$250,000</div>
+          <p>5 Bedrooms • 4 Bathrooms • Swimming Pool</p>
+          <a href="#contact">View Details →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="features" id="why-us">
+
+    <div class="section-title">
+      <h2>Why Choose PrimeNest?</h2>
+      <p>Making your property journey simple and reliable.</p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <div class="feature-icon">🏠</div>
+        <h3>Quality Properties</h3>
+        <p>Carefully selected properties for buyers and investors.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🤝</div>
+        <h3>Trusted Service</h3>
+        <p>Professional support from your first inquiry to closing.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Great Opportunities</h3>
+        <p>Find properties that match your goals and budget.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+
+    <h2>Ready to Find Your Next Property?</h2>
+
+    <p>
+      Talk to our team today and let's help you find the right property.
+    </p>
+
+    <a href="https://wa.me/2340000000000" class="btn">
+      Chat on WhatsApp
+    </a>
+
+  </section>
+
+  <footer>
+    <p>© 2026 PrimeNest Realty. All rights reserved.</p>
+    <p>Real Estate • Homes • Investments</p>
+  </footer>
+
+  <script>
+    function searchProperty() {
+      alert("Thanks! Property search is ready to be connected to a real estate database.");
+    }
+  </script>
+
+</body>
+</html>
