@@ -6,7 +6,7 @@
 
   <title>Haven Estates | Find Your Dream Home</title>
 
-  <meta name="description" content="Discover premium homes, apartments and investment properties with Haven Estates.">
+  <meta name="description" content="Haven Estates helps you discover beautiful homes, apartments and investment properties.">
 
   <style>
     * {
@@ -22,7 +22,7 @@
     body {
       font-family: Arial, sans-serif;
       background: #f8f7f4;
-      color: #1d1d1d;
+      color: #222;
       line-height: 1.6;
     }
 
@@ -35,7 +35,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
 
@@ -93,7 +93,7 @@
       max-width: 620px;
       font-size: 19px;
       margin-bottom: 30px;
-      color: #eeeeee;
+      color: #eee;
     }
 
     .btn {
@@ -254,6 +254,7 @@
     .details {
       display: flex;
       gap: 15px;
+      flex-wrap: wrap;
       font-size: 14px;
       color: #555;
       border-top: 1px solid #eee;
@@ -298,6 +299,7 @@
       display: flex;
       gap: 35px;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
 
     .stats strong {
@@ -370,6 +372,12 @@
     footer p {
       color: #bfc9c5;
       font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .creator {
+      margin-top: 12px;
+      font-size: 13px;
     }
 
     @media (max-width: 850px) {
@@ -399,12 +407,18 @@
         min-height: 300px;
       }
 
-      .stats {
-        flex-wrap: wrap;
-      }
-
       section {
         padding: 60px 6%;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .contact h2,
+      .about h2,
+      .heading h2 {
+        font-size: 32px;
       }
     }
   </style>
@@ -422,7 +436,6 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
-
 
 <section class="hero">
 
@@ -448,7 +461,6 @@
   </div>
 
 </section>
-
 
 <div class="search">
 
@@ -480,13 +492,14 @@
 
 </div>
 
-
 <section id="properties">
 
   <div class="heading">
     <small>Our Collection</small>
     <h2>Featured Properties</h2>
-    <p>Explore homes selected for comfort, quality and investment value.</p>
+    <p>
+      Explore homes selected for comfort, quality and investment value.
+    </p>
   </div>
 
   <div class="properties">
@@ -494,7 +507,9 @@
     <div class="property">
 
       <div class="property-image">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Modern luxury home">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+          alt="Modern luxury home">
         <span class="tag">FOR SALE</span>
       </div>
 
@@ -512,11 +527,12 @@
 
     </div>
 
-
     <div class="property">
 
       <div class="property-image">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Luxury apartment">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+          alt="Luxury apartment">
         <span class="tag">FOR SALE</span>
       </div>
 
@@ -534,11 +550,12 @@
 
     </div>
 
-
     <div class="property">
 
       <div class="property-image">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Beautiful family house">
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+          alt="Beautiful family house">
         <span class="tag">FOR RENT</span>
       </div>
 
@@ -560,7 +577,6 @@
 
 </section>
 
-
 <section class="about" id="about">
 
   <div class="about-image"></div>
@@ -572,13 +588,13 @@
     <h2>Property decisions made easier.</h2>
 
     <p>
-      We help buyers, sellers and investors discover exceptional
-      property opportunities with confidence.
+      Haven Estates helps buyers, sellers and investors discover
+      exceptional property opportunities with confidence.
     </p>
 
     <p>
-      From your first viewing to the final decision, our team is
-      focused on making your real-estate journey simple and professional.
+      From your first viewing to the final decision, our team focuses
+      on making your real-estate journey simple and professional.
     </p>
 
     <div class="stats">
@@ -604,13 +620,18 @@
 
 </section>
 
-
 <section class="why" id="why">
 
   <div class="heading">
+
     <small>Why Choose Us</small>
+
     <h2>A better way to find property.</h2>
-    <p>Professional service from search to closing.</p>
+
+    <p>
+      Professional service from search to closing.
+    </p>
+
   </div>
 
   <div class="why-grid">
@@ -643,7 +664,6 @@
 
 </section>
 
-
 <section class="contact" id="contact">
 
   <h2>Ready to find your next property?</h2>
@@ -661,7 +681,6 @@
 
 </section>
 
-
 <footer>
 
   <div class="logo">Haven<span>Estates</span></div>
@@ -674,8 +693,11 @@
     © 2026 Haven Estates. All rights reserved.
   </p>
 
-</footer>
+  <p class="creator">
+    Website demo created by Abubakar Usman
+  </p>
 
+</footer>
 
 <script>
 
