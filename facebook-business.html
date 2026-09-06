@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SocialBoost - Grow Your Business on Facebook</title>
+
+  <meta name="description" content="A professional Facebook business landing page for showcasing services, products, and social media presence.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1877f2;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #1877f2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #667085;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1877f2;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .button.secondary {
+      background: #111827;
+    }
+
+    .section {
+      padding: 65px 7%;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #667085;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      background: #eaf3ff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #667085;
+    }
+
+    .contact {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">SocialBoost</div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Grow Your Business <span>Online</span></h1>
+
+    <p>
+      A professional landing page designed to help businesses showcase
+      their services, connect with customers, and grow their online presence.
+    </p>
+
+    <a href="#services" class="button">Explore Services</a>
+
+    <a href="#contact" class="button secondary">Contact Us</a>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+
+    <h2>What We Offer</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>📱 Social Media Marketing</h3>
+        <p>
+          Promote your business and reach potential customers through
+          effective social media strategies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📣 Business Promotion</h3>
+        <p>
+          Showcase your products and services with professional online
+          content designed to attract attention.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Content Creation</h3>
+        <p>
+          Create engaging posts, graphics, and promotional content for
+          your business and social media audience.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🚀 Online Growth</h3>
+        <p>
+          Build a stronger online presence and make it easier for customers
+          to discover and contact your business.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+
+    <h2>About Our Business</h2>
+
+    <div class="card">
+
+      <p>
+        We help businesses build a professional online presence and
+        connect with customers through modern digital marketing.
+      </p>
+
+      <p>
+        This website is designed as a simple starting point for businesses
+        that want to showcase what they offer online.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Ready to Grow Your Business?</h2>
+
+    <p>
+      Make it easier for customers to discover your services and get
+      in touch with you.
+    </p>
+
+    <a href="#contact" class="button">Get Started</a>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="card contact">
+
+      <p>
+        Interested in our services or want to learn more?
+      </p>
+
+      <p>
+        Email:
+        <strong>your@email.com</strong>
+      </p>
+
+      <a href="#" class="button">
+        Visit Our Facebook Page
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>© 2026 SocialBoost. All rights reserved.</p>
+
+  </footer>
+
+</body>
+</html>
