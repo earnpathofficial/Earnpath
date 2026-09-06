@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PrimeNest Realty | Find Your Dream Home</title>
+  <title>Haven Estates | Find Your Dream Home</title>
 
-  <meta name="description" content="PrimeNest Realty helps you discover beautiful homes and properties in great locations.">
+  <meta name="description" content="Discover premium homes, apartments and investment properties with Haven Estates.">
 
   <style>
     * {
@@ -15,135 +15,175 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #f7f8fa;
-      color: #222;
+      background: #f8f7f4;
+      color: #1d1d1d;
       line-height: 1.6;
     }
 
     header {
-      background: #ffffff;
-      padding: 20px 7%;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #123c69;
+      font-size: 25px;
+      font-weight: 800;
+      color: #173f35;
+    }
+
+    .logo span {
+      color: #b28b45;
     }
 
     nav a {
+      color: #222;
       text-decoration: none;
-      color: #333;
       margin-left: 25px;
       font-weight: 600;
     }
 
+    nav a:hover {
+      color: #b28b45;
+    }
+
     .hero {
-      min-height: 75vh;
-      padding: 90px 7%;
+      min-height: 90vh;
+      padding: 150px 7% 80px;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, #123c69, #1d6fa5);
       color: white;
+      background:
+        linear-gradient(rgba(13,35,29,0.72), rgba(13,35,29,0.72)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 750px;
+    }
+
+    .hero small {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: #e5c27a;
     }
 
     .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 20px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin: 18px 0;
     }
 
     .hero p {
+      max-width: 620px;
       font-size: 19px;
       margin-bottom: 30px;
-      opacity: 0.95;
+      color: #eeeeee;
     }
 
     .btn {
       display: inline-block;
       padding: 14px 25px;
-      background: white;
-      color: #123c69;
+      border-radius: 6px;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
       margin-right: 10px;
+      transition: 0.3s;
     }
 
-    .btn-dark {
-      background: #0b2948;
+    .btn-primary {
+      background: #c49a52;
       color: white;
     }
 
-    .search-box {
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
       background: white;
+      color: #173f35;
+    }
+
+    .search {
       width: 86%;
-      margin: -45px auto 60px;
+      margin: -45px auto 70px;
+      background: white;
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      border-radius: 10px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
       position: relative;
       z-index: 5;
     }
 
-    .search-box h2 {
+    .search h2 {
+      color: #173f35;
       margin-bottom: 15px;
-      color: #123c69;
     }
 
-    .search-fields {
-      display: flex;
+    .search-form {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr auto;
       gap: 12px;
-      flex-wrap: wrap;
     }
 
-    .search-fields input,
-    .search-fields select {
-      flex: 1;
-      min-width: 180px;
+    .search input,
+    .search select {
+      width: 100%;
       padding: 14px;
       border: 1px solid #ddd;
-      border-radius: 7px;
+      border-radius: 6px;
+      background: white;
     }
 
-    .search-fields button {
-      padding: 14px 25px;
+    .search button {
       border: none;
-      border-radius: 7px;
-      background: #123c69;
+      border-radius: 6px;
+      padding: 14px 25px;
+      background: #173f35;
       color: white;
       font-weight: bold;
       cursor: pointer;
     }
 
     section {
-      padding: 60px 7%;
+      padding: 80px 7%;
     }
 
-    .section-title {
+    .heading {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 45px;
     }
 
-    .section-title h2 {
-      font-size: 35px;
-      color: #123c69;
+    .heading small {
+      color: #b28b45;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 
-    .section-title p {
+    .heading h2 {
+      color: #173f35;
+      font-size: 40px;
+      margin: 8px 0;
+    }
+
+    .heading p {
       color: #666;
     }
 
@@ -157,105 +197,214 @@
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .property:hover {
+      transform: translateY(-6px);
     }
 
     .property-image {
-      height: 210px;
-      background: linear-gradient(135deg, #b9d7ea, #e8f1f7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .property-info {
-      padding: 20px;
+    .property-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .property-info h3 {
-      color: #123c69;
-      margin-bottom: 8px;
+    .tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #173f35;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .property-content {
+      padding: 22px;
+    }
+
+    .property-content h3 {
+      color: #173f35;
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .location {
+      color: #777;
+      font-size: 14px;
     }
 
     .price {
-      font-size: 20px;
+      font-size: 23px;
+      color: #b28b45;
+      font-weight: 800;
+      margin: 12px 0;
+    }
+
+    .details {
+      display: flex;
+      gap: 15px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #eee;
+      padding-top: 14px;
+    }
+
+    .about {
+      background: #173f35;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 450px;
+      border-radius: 12px;
+      background:
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+    }
+
+    .about small {
+      color: #e5c27a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       font-weight: bold;
-      margin: 10px 0;
     }
 
-    .property-info a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      color: #123c69;
-      font-weight: bold;
+    .about h2 {
+      font-size: 42px;
+      margin: 12px 0 20px;
     }
 
-    .features {
-      background: #ffffff;
+    .about p {
+      color: #d9dfdc;
+      margin-bottom: 18px;
     }
 
-    .feature-grid {
+    .stats {
+      display: flex;
+      gap: 35px;
+      margin-top: 30px;
+    }
+
+    .stats strong {
+      display: block;
+      font-size: 28px;
+      color: #e5c27a;
+    }
+
+    .stats span {
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    .why {
+      background: white;
+    }
+
+    .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      text-align: center;
     }
 
-    .feature {
-      padding: 30px 20px;
+    .why-card {
+      padding: 30px;
+      border: 1px solid #eee;
       border-radius: 10px;
-      background: #f7f8fa;
-    }
-
-    .feature-icon {
-      font-size: 40px;
-      margin-bottom: 12px;
-    }
-
-    .cta {
       text-align: center;
-      background: #123c69;
-      color: white;
     }
 
-    .cta h2 {
+    .why-card .icon {
       font-size: 38px;
       margin-bottom: 15px;
     }
 
-    .cta p {
-      margin-bottom: 25px;
+    .why-card h3 {
+      color: #173f35;
+      margin-bottom: 10px;
     }
 
-    footer {
-      background: #0b2948;
-      color: white;
-      padding: 30px 7%;
+    .contact {
+      background: #f0ede6;
       text-align: center;
     }
 
-    footer p {
-      opacity: 0.8;
+    .contact h2 {
+      font-size: 42px;
+      color: #173f35;
+      margin-bottom: 15px;
     }
 
-    @media (max-width: 800px) {
+    .contact p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    footer {
+      background: #102c25;
+      color: white;
+      padding: 35px 7%;
+      text-align: center;
+    }
+
+    footer .logo {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #bfc9c5;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+
       nav {
         display: none;
       }
 
-      .hero h1 {
-        font-size: 38px;
+      .hero {
+        min-height: 80vh;
       }
 
-      .properties,
-      .feature-grid {
+      .search-form {
         grid-template-columns: 1fr;
       }
 
-      .search-box {
-        width: 90%;
+      .properties,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      .stats {
+        flex-wrap: wrap;
+      }
+
+      section {
+        padding: 60px 6%;
       }
     }
   </style>
@@ -263,158 +412,282 @@
 
 <body>
 
-  <header>
-    <div class="logo">PrimeNest Realty</div>
+<header>
+  <div class="logo">Haven<span>Estates</span></div>
 
-    <nav>
-      <a href="#properties">Properties</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#properties">Properties</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Find a Place You'll Love to Call Home.</h1>
 
-      <p>
-        Discover beautiful homes, apartments, and investment properties
-        in locations that fit your lifestyle and budget.
-      </p>
+<section class="hero">
 
-      <a href="#properties" class="btn">View Properties</a>
-      <a href="#contact" class="btn btn-dark">Contact Us</a>
-    </div>
-  </section>
+  <div class="hero-content">
 
-  <div class="search-box">
-    <h2>Find Your Perfect Property</h2>
+    <small>Premium Real Estate</small>
 
-    <div class="search-fields">
-      <input type="text" placeholder="Location">
-
-      <select>
-        <option>Property Type</option>
-        <option>Apartment</option>
-        <option>House</option>
-        <option>Villa</option>
-        <option>Land</option>
-      </select>
-
-      <select>
-        <option>Price Range</option>
-        <option>Under $50,000</option>
-        <option>$50,000 - $100,000</option>
-        <option>$100,000 - $250,000</option>
-        <option>$250,000+</option>
-      </select>
-
-      <button onclick="searchProperty()">Search</button>
-    </div>
-  </div>
-
-  <section id="properties">
-
-    <div class="section-title">
-      <h2>Featured Properties</h2>
-      <p>Explore some of our featured homes and investment opportunities.</p>
-    </div>
-
-    <div class="properties">
-
-      <div class="property">
-        <div class="property-image">🏡</div>
-
-        <div class="property-info">
-          <h3>Modern Family Home</h3>
-          <p>📍 Lekki, Lagos</p>
-          <div class="price">$120,000</div>
-          <p>4 Bedrooms • 3 Bathrooms • 2 Parking Spaces</p>
-          <a href="#contact">View Details →</a>
-        </div>
-      </div>
-
-      <div class="property">
-        <div class="property-image">🏢</div>
-
-        <div class="property-info">
-          <h3>Luxury City Apartment</h3>
-          <p>📍 Abuja, Nigeria</p>
-          <div class="price">$95,000</div>
-          <p>3 Bedrooms • 2 Bathrooms • City View</p>
-          <a href="#contact">View Details →</a>
-        </div>
-      </div>
-
-      <div class="property">
-        <div class="property-image">🏘️</div>
-
-        <div class="property-info">
-          <h3>Premium Villa</h3>
-          <p>📍 Victoria Island, Lagos</p>
-          <div class="price">$250,000</div>
-          <p>5 Bedrooms • 4 Bathrooms • Swimming Pool</p>
-          <a href="#contact">View Details →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="features" id="why-us">
-
-    <div class="section-title">
-      <h2>Why Choose PrimeNest?</h2>
-      <p>Making your property journey simple and reliable.</p>
-    </div>
-
-    <div class="feature-grid">
-
-      <div class="feature">
-        <div class="feature-icon">🏠</div>
-        <h3>Quality Properties</h3>
-        <p>Carefully selected properties for buyers and investors.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🤝</div>
-        <h3>Trusted Service</h3>
-        <p>Professional support from your first inquiry to closing.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">💰</div>
-        <h3>Great Opportunities</h3>
-        <p>Find properties that match your goals and budget.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="cta" id="contact">
-
-    <h2>Ready to Find Your Next Property?</h2>
+    <h1>Find a home that feels like yours.</h1>
 
     <p>
-      Talk to our team today and let's help you find the right property.
+      Discover exceptional homes, apartments and investment properties
+      in some of the most desirable locations.
     </p>
 
-    <a href="https://wa.me/2340000000000" class="btn">
-      Chat on WhatsApp
+    <a href="#properties" class="btn btn-primary">
+      Explore Properties
     </a>
 
-  </section>
+    <a href="#contact" class="btn btn-light">
+      Talk to an Agent
+    </a>
 
-  <footer>
-    <p>© 2026 PrimeNest Realty. All rights reserved.</p>
-    <p>Real Estate • Homes • Investments</p>
-  </footer>
+  </div>
 
-  <script>
-    function searchProperty() {
-      alert("Thanks! Property search is ready to be connected to a real estate database.");
-    }
-  </script>
+</section>
+
+
+<div class="search">
+
+  <h2>Find Your Perfect Property</h2>
+
+  <div class="search-form">
+
+    <input type="text" placeholder="Enter location">
+
+    <select>
+      <option>Property Type</option>
+      <option>House</option>
+      <option>Apartment</option>
+      <option>Villa</option>
+      <option>Land</option>
+    </select>
+
+    <select>
+      <option>Price Range</option>
+      <option>Under $50,000</option>
+      <option>$50,000 - $100,000</option>
+      <option>$100,000 - $250,000</option>
+      <option>$250,000+</option>
+    </select>
+
+    <button onclick="searchProperty()">Search</button>
+
+  </div>
+
+</div>
+
+
+<section id="properties">
+
+  <div class="heading">
+    <small>Our Collection</small>
+    <h2>Featured Properties</h2>
+    <p>Explore homes selected for comfort, quality and investment value.</p>
+  </div>
+
+  <div class="properties">
+
+    <div class="property">
+
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Modern luxury home">
+        <span class="tag">FOR SALE</span>
+      </div>
+
+      <div class="property-content">
+        <h3>Modern Luxury Villa</h3>
+        <p class="location">📍 Lekki, Lagos</p>
+        <div class="price">$250,000</div>
+
+        <div class="details">
+          <span>🛏 5 Beds</span>
+          <span>🛁 4 Baths</span>
+          <span>🚗 2 Cars</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="property">
+
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Luxury apartment">
+        <span class="tag">FOR SALE</span>
+      </div>
+
+      <div class="property-content">
+        <h3>Luxury City Apartment</h3>
+        <p class="location">📍 Abuja, Nigeria</p>
+        <div class="price">$145,000</div>
+
+        <div class="details">
+          <span>🛏 3 Beds</span>
+          <span>🛁 2 Baths</span>
+          <span>🚗 1 Car</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="property">
+
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Beautiful family house">
+        <span class="tag">FOR RENT</span>
+      </div>
+
+      <div class="property-content">
+        <h3>Contemporary Family Home</h3>
+        <p class="location">📍 Victoria Island, Lagos</p>
+        <div class="price">$3,500 / month</div>
+
+        <div class="details">
+          <span>🛏 4 Beds</span>
+          <span>🛁 3 Baths</span>
+          <span>🚗 2 Cars</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="about-image"></div>
+
+  <div>
+
+    <small>About Haven Estates</small>
+
+    <h2>Property decisions made easier.</h2>
+
+    <p>
+      We help buyers, sellers and investors discover exceptional
+      property opportunities with confidence.
+    </p>
+
+    <p>
+      From your first viewing to the final decision, our team is
+      focused on making your real-estate journey simple and professional.
+    </p>
+
+    <div class="stats">
+
+      <div>
+        <strong>250+</strong>
+        <span>Properties</span>
+      </div>
+
+      <div>
+        <strong>12+</strong>
+        <span>Locations</span>
+      </div>
+
+      <div>
+        <strong>8+</strong>
+        <span>Years Experience</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="why" id="why">
+
+  <div class="heading">
+    <small>Why Choose Us</small>
+    <h2>A better way to find property.</h2>
+    <p>Professional service from search to closing.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="icon">🏡</div>
+      <h3>Quality Homes</h3>
+      <p>
+        Carefully selected properties that meet high standards.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h3>Expert Guidance</h3>
+      <p>
+        Get professional support throughout your property journey.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🔑</div>
+      <h3>Easy Process</h3>
+      <p>
+        Simple communication and a straightforward buying experience.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <h2>Ready to find your next property?</h2>
+
+  <p>
+    Speak with a property specialist today and discover
+    opportunities that match your goals.
+  </p>
+
+  <a
+    href="https://wa.me/2340000000000"
+    class="btn btn-primary">
+    💬 Chat on WhatsApp
+  </a>
+
+</section>
+
+
+<footer>
+
+  <div class="logo">Haven<span>Estates</span></div>
+
+  <p>
+    Premium homes • Property investment • Real estate
+  </p>
+
+  <p>
+    © 2026 Haven Estates. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+function searchProperty() {
+
+  alert(
+    "Thanks! The property search feature can be connected to the client's real property listings."
+  );
+
+}
+
+</script>
 
 </body>
 </html>
