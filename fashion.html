@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LuxeWear | Modern Fashion & Style</title>
+
+  <meta name="description" content="LuxeWear is a modern fashion brand offering stylish clothing, accessories and premium everyday looks.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf9f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      font-weight: 400;
+    }
+
+    nav a {
+      color: #222;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .hero {
+      min-height: 92vh;
+      padding: 150px 7% 80px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero small {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 80px);
+      line-height: 1;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 27px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      color: #111;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .heading h2 {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .heading p {
+      color: #666;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      background: white;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .product-image {
+      height: 330px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #111;
+      color: white;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 5px;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .shop-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .banner {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      color: white;
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    }
+
+    .banner-content {
+      max-width: 600px;
+    }
+
+    .banner h2 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      background: #111;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 430px;
+      border-radius: 8px;
+      background:
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+    }
+
+    .about h2 {
+      font-size: 43px;
+      margin: 10px 0 20px;
+    }
+
+    .about p {
+      color: #ccc;
+      margin-bottom: 18px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .value {
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .value h3 {
+      margin-bottom: 7px;
+    }
+
+    .value p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .contact {
+      text-align: center;
+      background: #f0ede8;
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #666;
+    }
+
+    footer {
+      background: #090909;
+      color: white;
+      text-align: center;
+      padding: 35px 7%;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 950px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 400px;
+      }
+
+      .banner {
+        padding: 40px 25px;
+      }
+
+      .banner h2 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Luxe<span>Wear</span>
+  </div>
+
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <small>New Season Collection</small>
+
+    <h1>Style that speaks for itself.</h1>
+
+    <p>
+      Discover modern fashion designed for people who want to look
+      confident, comfortable and effortlessly stylish.
+    </p>
+
+    <a href="#shop" class="btn btn-light">
+      Shop Collection
+    </a>
+
+    <a href="#contact" class="btn btn-dark">
+      Contact Us
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="shop">
+
+  <div class="heading">
+    <h2>Featured Collection</h2>
+    <p>Discover some of our latest fashion pieces.</p>
+  </div>
+
+  <div class="products">
+
+    <div class="product">
+
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=85"
+          alt="Classic fashion outfit">
+        <span class="badge">NEW</span>
+      </div>
+
+      <div class="product-info">
+        <h3>Classic Essentials</h3>
+        <p>Modern everyday wear</p>
+        <div class="price">$65</div>
+        <a href="#contact" class="shop-link">Order Now →</a>
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+          alt="Elegant fashion dress">
+        <span class="badge">BEST SELLER</span>
+      </div>
+
+      <div class="product-info">
+        <h3>Elegant Collection</h3>
+        <p>Designed for special moments</p>
+        <div class="price">$95</div>
+        <a href="#contact" class="shop-link">Order Now →</a>
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
+          alt="Stylish clothing">
+        <span class="badge">NEW</span>
+      </div>
+
+      <div class="product-info">
+        <h3>Urban Collection</h3>
+        <p>Effortless street style</p>
+        <div class="price">$75</div>
+        <a href="#contact" class="shop-link">Order Now →</a>
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85"
+          alt="Premium fashion jacket">
+        <span class="badge">LIMITED</span>
+      </div>
+
+      <div class="product-info">
+        <h3>Premium Outerwear</h3>
+        <p>Signature seasonal pieces</p>
+        <div class="price">$120</div>
+        <a href="#contact" class="shop-link">Order Now →</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="banner" id="collection">
+
+  <div class="banner-content">
+
+    <h2>New season. New attitude.</h2>
+
+    <p>
+      Refresh your wardrobe with carefully selected pieces
+      created for modern lifestyles.
+    </p>
+
+    <br>
+
+    <a href="#shop" class="btn btn-light">
+      Explore Collection
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="about-image"></div>
+
+  <div>
+
+    <small>ABOUT LUXEWEAR</small>
+
+    <h2>Fashion made for your everyday story.</h2>
+
+    <p>
+      LuxeWear is a modern fashion brand focused on timeless
+      designs, confident looks and quality everyday style.
+    </p>
+
+    <p>
+      Our goal is simple: make it easier for you to express
+      your personality through what you wear.
+    </p>
+
+    <div class="values">
+
+      <div class="value">
+        <h3>✨ Quality</h3>
+        <p>Thoughtful designs made for everyday confidence.</p>
+      </div>
+
+      <div class="value">
+        <h3>🖤 Style</h3>
+        <p>Modern looks that remain timeless.</p>
+      </div>
+
+      <div class="value">
+        <h3>🤝 Service</h3>
+        <p>A simple and friendly shopping experience.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <h2>Ready to upgrade your style?</h2>
+
+  <p>
+    Contact LuxeWear to ask about products, sizes, availability
+    and orders.
+  </p>
+
+  <a
+    href="https://wa.me/2340000000000"
+    class="btn btn-dark">
+    💬 Order on WhatsApp
+  </a>
+
+</section>
+
+
+<footer>
+
+  <div class="logo">
+    Luxe<span>Wear</span>
+  </div>
+
+  <p>
+    Modern fashion • Clothing • Accessories
+  </p>
+
+  <p>
+    © 2026 LuxeWear. All rights reserved.
+  </p>
+
+  <p>
+    Website demo created by Abubakar Usman
+  </p>
+
+</footer>
+
+</body>
+</html>
