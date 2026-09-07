@@ -1,7 +1,7 @@
 {
-  "name": "EarnPath",
+  "name": "EarnPath — Learn. Earn. Grow.",
   "short_name": "EarnPath",
-  "description": "EarnPath helps beginners learn practical skills, discover online earning opportunities, and grow their income.",
+  "description": "EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products and ready-made websites.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -10,12 +10,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./earnpath-icon-192.png",
+      "src": "./earnpath-icon-192-1.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./earnpath-icon-512.png",
+      "src": "./earnpath-icon-512-2.png",
       "sizes": "512x512",
       "type": "image/png"
     }
