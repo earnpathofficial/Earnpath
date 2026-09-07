@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.earnpathofficial.earnpath",
+      "sha256_cert_fingerprints": [
+        "0F:8B:F2:85:78:92:13:11:BA:EC:B8:8F:D5:67:5F:3C:D0:47:2B:F3:C8:5E:10:EC:74:52:1A:38:31:86:8A:95"
+      ]
+    }
+  }
+]
