@@ -1,8 +1,19 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EarnPath — Learn. Earn. Grow.</title><meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products and ready-made websites."><link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#101827"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EarnPath — Learn. Earn. Grow.</title>
+
+<meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products and ready-made websites.">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#101827">
+
+<style>
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -30,14 +41,15 @@ button{
   cursor:pointer;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .header{
   position:sticky;
   top:0;
   z-index:1000;
   background:#101827;
   color:white;
-  padding:14px 18px;
+  padding:12px 15px;
   box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
@@ -47,31 +59,66 @@ button{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:10px;
 }
 
 .logo{
   font-size:22px;
   font-weight:800;
+  white-space:nowrap;
 }
 
 .logo span{
   color:#35d07f;
 }
 
-.profile{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:#35d07f;
-  color:#101827;
+/* ACCOUNT HEADER BUTTONS */
+
+.header-actions{
   display:flex;
   align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  border:0;
+  gap:7px;
 }
 
-/* ACCOUNT MODAL */
+.account-small-btn{
+  border:1px solid rgba(255,255,255,.25);
+  background:transparent;
+  color:white;
+  padding:9px 12px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.account-small-btn:hover{
+  transform:translateY(-1px);
+}
+
+.signup-btn{
+  background:#35d07f;
+  color:#101827;
+  border-color:#35d07f;
+}
+
+.logged-in-actions{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.profile-action{
+  background:#35d07f;
+  color:#101827;
+  border-color:#35d07f;
+}
+
+.logout-header-btn{
+  background:#283449;
+  color:white;
+}
+
+/* ================= ACCOUNT MODAL ================= */
+
 .account-modal{
   position:fixed;
   inset:0;
@@ -186,6 +233,8 @@ button{
   text-align:center;
 }
 
+/* PROFILE MENU */
+
 .profile-menu{
   position:fixed;
   top:70px;
@@ -220,7 +269,8 @@ button{
   font-weight:bold;
 }
 
-/* MAIN */
+/* ================= MAIN ================= */
+
 .container{
   max-width:1100px;
   margin:auto;
@@ -281,7 +331,8 @@ button{
   color:#101827;
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
+
 .search-box{
   margin-top:18px;
   display:flex;
@@ -313,7 +364,8 @@ button{
   font-size:14px;
 }
 
-/* STATS */
+/* ================= STATS ================= */
+
 .stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -340,7 +392,8 @@ button{
   font-size:13px;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 section{
   scroll-margin-top:80px;
   margin-top:35px;
@@ -360,7 +413,8 @@ section{
   margin-top:5px;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -408,7 +462,8 @@ section{
   font-size:14px;
 }
 
-/* PRODUCT */
+/* ================= PRODUCT ================= */
+
 .product{
   background:#101827;
   color:white;
@@ -422,7 +477,8 @@ section{
   margin:10px 0 18px;
 }
 
-/* WEBSITE */
+/* ================= WEBSITE ================= */
+
 .website-card{
   padding:0;
   overflow:hidden;
@@ -442,7 +498,8 @@ section{
   padding:18px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about{
   background:white;
   border-radius:21px;
@@ -456,7 +513,8 @@ section{
   margin-top:10px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
   background:#eafaf2;
   border-radius:21px;
@@ -468,7 +526,8 @@ section{
   color:#4e5b6e;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
   text-align:center;
   padding:30px 20px;
@@ -476,7 +535,8 @@ footer{
   font-size:13px;
 }
 
-/* BOTTOM NAV */
+/* ================= BOTTOM NAV ================= */
+
 .bottom-nav{
   position:fixed;
   bottom:0;
@@ -521,17 +581,33 @@ footer{
   display:none !important;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:800px){
+
   .grid{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
 
 @media(max-width:560px){
 
   .container{
     padding:14px;
+  }
+
+  .header{
+    padding:11px 10px;
+  }
+
+  .logo{
+    font-size:19px;
+  }
+
+  .account-small-btn{
+    padding:8px 9px;
+    font-size:11px;
   }
 
   .hero{
@@ -554,549 +630,973 @@ footer{
   .section-title h2{
     font-size:22px;
   }
+
 }
-</style></head><body><header class="header">
-  <div class="header-inner"><div class="logo">
-  Earn<span>Path</span>
-</div>
 
-<button class="profile" id="profileButton" onclick="openAccount()">
-  EP
-</button>
+</style>
+</head>
 
-  </div>
-</header><!-- ACCOUNT MODAL --><div class="account-modal" id="accountModal">  <div class="account-box"><div class="account-header">
+<body>
 
-  <h2 id="accountTitle">Welcome</h2>
+<!-- ================= HEADER ================= -->
 
-  <button class="close-btn" onclick="closeAccount()">
-    ×
-  </button>
+<header class="header">
 
-</div>
+  <div class="header-inner">
 
+    <div class="logo">
+      Earn<span>Path</span>
+    </div>
 
-<div class="account-tabs">
+    <!-- SHOW BEFORE LOGIN -->
 
-  <button
-    class="account-tab active"
-    id="signinTab"
-    onclick="showForm('signin')"
-  >
-    Sign In
-  </button>
+    <div class="header-actions" id="accountButtons">
 
-  <button
-    class="account-tab"
-    id="signupTab"
-    onclick="showForm('signup')"
-  >
-    Sign Up
-  </button>
+      <button
+        class="account-small-btn"
+        onclick="openAccount('signin')"
+      >
+        Sign In
+      </button>
 
-</div>
+      <button
+        class="account-small-btn signup-btn"
+        onclick="openAccount('signup')"
+      >
+        Sign Up
+      </button>
+
+    </div>
 
 
-<!-- SIGN IN -->
+    <!-- SHOW AFTER LOGIN -->
 
-<form
-  class="account-form active"
-  id="signinForm"
-  onsubmit="signIn(event)"
->
-
-  <div class="form-group">
-
-    <label>Email</label>
-
-    <input
-      type="email"
-      id="signinEmail"
-      placeholder="Enter your email"
-      required
+    <div
+      class="logged-in-actions hidden"
+      id="loggedInActions"
     >
 
+      <button
+        class="account-small-btn profile-action"
+        id="profileButton"
+        onclick="toggleProfileMenu()"
+      >
+        Profile
+      </button>
+
+      <button
+        class="account-small-btn logout-header-btn"
+        onclick="logout()"
+      >
+        Sign Out
+      </button>
+
+    </div>
+
   </div>
 
+</header>
 
-  <div class="form-group">
 
-    <label>Password</label>
+<!-- ================= ACCOUNT MODAL ================= -->
 
-    <input
-      type="password"
-      id="signinPassword"
-      placeholder="Enter your password"
-      required
+<div class="account-modal" id="accountModal">
+
+  <div class="account-box">
+
+    <div class="account-header">
+
+      <h2 id="accountTitle">
+        Welcome
+      </h2>
+
+      <button
+        class="close-btn"
+        onclick="closeAccount()"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="account-tabs">
+
+      <button
+        class="account-tab active"
+        id="signinTab"
+        onclick="showForm('signin')"
+      >
+        Sign In
+      </button>
+
+      <button
+        class="account-tab"
+        id="signupTab"
+        onclick="showForm('signup')"
+      >
+        Sign Up
+      </button>
+
+    </div>
+
+
+    <!-- SIGN IN -->
+
+    <form
+      class="account-form active"
+      id="signinForm"
+      onsubmit="signIn(event)"
     >
 
+      <div class="form-group">
+
+        <label>Email</label>
+
+        <input
+          type="email"
+          id="signinEmail"
+          placeholder="Enter your email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Password</label>
+
+        <input
+          type="password"
+          id="signinPassword"
+          placeholder="Enter your password"
+          required
+        >
+
+      </div>
+
+
+      <button
+        class="account-submit"
+        type="submit"
+      >
+        Sign In
+      </button>
+
+      <div
+        class="account-message"
+        id="signinMessage"
+      ></div>
+
+    </form>
+
+
+    <!-- SIGN UP -->
+
+    <form
+      class="account-form"
+      id="signupForm"
+      onsubmit="signUp(event)"
+    >
+
+      <div class="form-group">
+
+        <label>Full Name</label>
+
+        <input
+          type="text"
+          id="signupName"
+          placeholder="Enter your name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Email</label>
+
+        <input
+          type="email"
+          id="signupEmail"
+          placeholder="Enter your email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>Password</label>
+
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Create a password"
+          minlength="6"
+          required
+        >
+
+      </div>
+
+
+      <button
+        class="account-submit"
+        type="submit"
+      >
+        Create Account
+      </button>
+
+      <div
+        class="account-message"
+        id="signupMessage"
+      ></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- ================= PROFILE MENU ================= -->
+
+<div
+  class="profile-menu"
+  id="profileMenu"
+>
+
+  <h3 id="profileName">
+    EarnPath User
+  </h3>
+
+  <p id="profileEmail">
+    Not signed in
+  </p>
+
+  <button onclick="logout()">
+    Sign Out
+  </button>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+<!-- HERO -->
+
+<section id="top">
+
+  <div class="hero">
+
+    <h1>
+      Learn. <span>Earn.</span> Grow.
+    </h1>
+
+    <p>
+      EarnPath helps beginners discover practical skills,
+      online earning opportunities, digital products and
+      ready-made websites.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="#earn"
+        class="btn btn-primary"
+      >
+        Start Earning
+      </a>
+
+      <a
+        href="#learn"
+        class="btn btn-light"
+      >
+        Start Learning
+      </a>
+
+    </div>
+
   </div>
 
 
-  <button class="account-submit" type="submit">
-    Sign In
-  </button>
+  <!-- SEARCH -->
 
-  <div class="account-message" id="signinMessage"></div>
-
-</form>
-
-
-<!-- SIGN UP -->
-
-<form
-  class="account-form"
-  id="signupForm"
-  onsubmit="signUp(event)"
->
-
-  <div class="form-group">
-
-    <label>Full Name</label>
+  <div class="search-box">
 
     <input
       type="text"
-      id="signupName"
-      placeholder="Enter your name"
-      required
+      id="searchInput"
+      placeholder="Search EarnPath..."
+      onkeyup="searchContent()"
     >
+
+    <button onclick="searchContent()">
+      🔎
+    </button>
 
   </div>
 
+  <div id="searchMessage"></div>
 
-  <div class="form-group">
 
-    <label>Email</label>
+  <!-- STATS -->
 
-    <input
-      type="email"
-      id="signupEmail"
-      placeholder="Enter your email"
-      required
-    >
+  <div class="stats">
+
+    <div class="stat">
+
+      <strong>💰</strong>
+
+      <span>
+        Earn Online
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>📚</strong>
+
+      <span>
+        Learn Skills
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>🌐</strong>
+
+      <span>
+        Websites
+      </span>
+
+    </div>
 
   </div>
 
+</section>
 
-  <div class="form-group">
 
-    <label>Password</label>
+<!-- WAYS TO EARN -->
 
-    <input
-      type="password"
-      id="signupPassword"
-      placeholder="Create a password"
-      minlength="6"
-      required
-    >
+<section id="earn">
 
-  </div>
+  <div class="section-title">
 
-
-  <button class="account-submit" type="submit">
-    Create Account
-  </button>
-
-  <div class="account-message" id="signupMessage"></div>
-
-</form>
-
-  </div></div><!-- PROFILE MENU --><div class="profile-menu" id="profileMenu">  <h3 id="profileName">
-    EarnPath User
-  </h3>  <p id="profileEmail">
-    Not signed in
-  </p>  <button onclick="logout()">
-    Log Out
-  </button></div><main class="container"><section id="top">  <div class="hero"><h1>
-  Learn. <span>Earn.</span> Grow.
-</h1>
-
-<p>
-  EarnPath helps beginners discover practical skills,
-  online earning opportunities, digital products and
-  ready-made websites.
-</p>
-
-<div class="hero-buttons">
-
-  <a href="#earn" class="btn btn-primary">
-    Start Earning
-  </a>
-
-  <a href="#learn" class="btn btn-light">
-    Start Learning
-  </a>
-
-</div>
-
-  </div>  <div class="search-box"><input
-  type="text"
-  id="searchInput"
-  placeholder="Search EarnPath..."
-  onkeyup="searchContent()"
->
-
-<button onclick="searchContent()">
-  🔎
-</button>
-
-  </div>  <div id="searchMessage"></div>  <div class="stats"><div class="stat">
-  <strong>💰</strong>
-  <span>Earn Online</span>
-</div>
-
-<div class="stat">
-  <strong>📚</strong>
-  <span>Learn Skills</span>
-</div>
-
-<div class="stat">
-  <strong>🌐</strong>
-  <span>Websites</span>
-</div>
-
-  </div></section><section id="earn">  <div class="section-title">
-    <h2>💰 Ways to Earn</h2>
-    <p>Explore practical online opportunities.</p>
-  </div>  <div class="grid"><div class="card searchable">
-
-  <div class="icon">💻</div>
-
-  <h3>Freelancing</h3>
-
-  <p>
-    Learn how to offer useful services
-    and find clients online.
-  </p>
-
-  <a class="card-link" href="freelancing.html">
-    Explore →
-  </a>
-
-</div>
-
-
-<div class="card searchable">
-
-  <div class="icon">📢</div>
-
-  <h3>Affiliate Marketing</h3>
-
-  <p>
-    Learn how to promote products
-    and earn commissions.
-  </p>
-
-  <a class="card-link" href="affiliate-marketing.html">
-    Explore →
-  </a>
-
-</div>
-
-
-<div class="card searchable">
-
-  <div class="icon">📦</div>
-
-  <h3>Digital Products</h3>
-
-  <p>
-    Create and sell digital products online.
-  </p>
-
-  <a class="card-link" href="digital-products.html">
-    Explore →
-  </a>
-
-</div>
-
-
-<div class="card searchable">
-
-  <div class="icon">📱</div>
-
-  <h3>Social Media</h3>
-
-  <p>
-    Discover ways to use social platforms
-    to build an audience.
-  </p>
-
-  <a class="card-link" href="facebook-business.html">
-    Explore →
-  </a>
-
-</div>
-
-  </div></section><section id="learn">  <div class="section-title"><h2>📚 Learn Skills</h2>
-
-<p>
-  Build practical skills for the digital economy.
-</p>
-
-  </div>  <div class="grid"><div class="card searchable">
-
-  <div class="icon">🧠</div>
-
-  <h3>Digital Skills</h3>
-
-  <p>
-    Start developing skills you can use
-    to create online opportunities.
-  </p>
-
-  <a class="card-link" href="skills.html">
-    Learn More →
-  </a>
-
-</div>
-
-
-<div class="card searchable">
-
-  <div class="icon">🤖</div>
-
-  <h3>AI Tools</h3>
-
-  <p>
-    Discover useful AI tools and ways
-    they can improve your workflow.
-  </p>
-
-  <a class="card-link" href="ai-tools.html">
-    Learn More →
-  </a>
-
-</div>
-
-  </div></section><section id="websites">  <div class="section-title"><h2>🌐 Websites for Sale</h2>
-
-<p>
-  Ready-made website templates for businesses
-  and creators.
-</p>
-
-  </div>  <div class="grid"><div class="card website-card searchable">
-
-  <div class="website-top">👗</div>
-
-  <div class="website-body">
-
-    <h3>Fashion Website</h3>
+    <h2>
+      💰 Ways to Earn
+    </h2>
 
     <p>
-      Modern website concept for fashion brands,
-      boutiques and clothing businesses.
+      Explore practical online opportunities.
     </p>
 
-    <a href="fashion.html" class="btn btn-primary">
-      View Website
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        💻
+      </div>
+
+      <h3>
+        Freelancing
+      </h3>
+
+      <p>
+        Learn how to offer useful services
+        and find clients online.
+      </p>
+
+      <a
+        class="card-link"
+        href="freelancing.html"
+      >
+        Explore →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        📢
+      </div>
+
+      <h3>
+        Affiliate Marketing
+      </h3>
+
+      <p>
+        Learn how to promote products
+        and earn commissions.
+      </p>
+
+      <a
+        class="card-link"
+        href="affiliate-marketing.html"
+      >
+        Explore →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        📦
+      </div>
+
+      <h3>
+        Digital Products
+      </h3>
+
+      <p>
+        Create and sell digital products online.
+      </p>
+
+      <a
+        class="card-link"
+        href="digital-products.html"
+      >
+        Explore →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        📱
+      </div>
+
+      <h3>
+        Social Media
+      </h3>
+
+      <p>
+        Discover ways to use social platforms
+        to build an audience.
+      </p>
+
+      <a
+        class="card-link"
+        href="facebook-business.html"
+      >
+        Explore →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LEARN SKILLS -->
+
+<section id="learn">
+
+  <div class="section-title">
+
+    <h2>
+      📚 Learn Skills
+    </h2>
+
+    <p>
+      Build practical skills for the digital economy.
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        🧠
+      </div>
+
+      <h3>
+        Digital Skills
+      </h3>
+
+      <p>
+        Start developing skills you can use
+        to create online opportunities.
+      </p>
+
+      <a
+        class="card-link"
+        href="skills.html"
+      >
+        Learn More →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        🤖
+      </div>
+
+      <h3>
+        AI Tools
+      </h3>
+
+      <p>
+        Discover useful AI tools and ways
+        they can improve your workflow.
+      </p>
+
+      <a
+        class="card-link"
+        href="ai-tools.html"
+      >
+        Learn More →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WEBSITES -->
+
+<section id="websites">
+
+  <div class="section-title">
+
+    <h2>
+      🌐 Websites for Sale
+    </h2>
+
+    <p>
+      Ready-made website templates for businesses
+      and creators.
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="card website-card searchable">
+
+      <div class="website-top">
+        👗
+      </div>
+
+      <div class="website-body">
+
+        <h3>
+          Fashion Website
+        </h3>
+
+        <p>
+          Modern website concept for fashion brands,
+          boutiques and clothing businesses.
+        </p>
+
+        <a
+          href="fashion.html"
+          class="btn btn-primary"
+        >
+          View Website
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="card website-card searchable">
+
+      <div class="website-top">
+        🏠
+      </div>
+
+      <div class="website-body">
+
+        <h3>
+          Real Estate Website
+        </h3>
+
+        <p>
+          Professional landing page concept for
+          property businesses and real estate agents.
+        </p>
+
+        <a
+          href="real-estate.html"
+          class="btn btn-primary"
+        >
+          View Website
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="card website-card searchable">
+
+      <div class="website-top">
+        📈
+      </div>
+
+      <div class="website-body">
+
+        <h3>
+          Facebook Business
+        </h3>
+
+        <p>
+          Business-focused website concept designed
+          for online brands and social media businesses.
+        </p>
+
+        <a
+          href="facebook-business.html"
+          class="btn btn-primary"
+        >
+          View Website
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCT -->
+
+<section id="product">
+
+  <div class="product searchable">
+
+    <h2>
+      ⭐ EarnPath Beginner Guide
+    </h2>
+
+    <p>
+      A beginner-friendly digital resource designed
+      to help you understand online earning,
+      digital skills and practical ways to start.
+    </p>
+
+    <a
+      href="https://selar.com/28686r5292"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      Get the Product →
     </a>
 
   </div>
 
-</div>
+</section>
 
 
-<div class="card website-card searchable">
+<!-- GUIDES -->
 
-  <div class="website-top">🏠</div>
+<section id="guides">
 
-  <div class="website-body">
+  <div class="section-title">
 
-    <h3>Real Estate Website</h3>
+    <h2>
+      📖 Guides
+    </h2>
 
     <p>
-      Professional landing page concept for
-      property businesses and real estate agents.
+      Simple resources for getting started.
     </p>
 
-    <a href="real-estate.html" class="btn btn-primary">
-      View Website
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        🚀
+      </div>
+
+      <h3>
+        Start Freelancing
+      </h3>
+
+      <p>
+        Understand the basics of building
+        a freelancing profile and finding opportunities.
+      </p>
+
+      <a
+        class="card-link"
+        href="freelancing.html"
+      >
+        Open Guide →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        💡
+      </div>
+
+      <h3>
+        Build Digital Products
+      </h3>
+
+      <p>
+        Learn the basic process of creating
+        and selling digital products.
+      </p>
+
+      <a
+        class="card-link"
+        href="digital-products.html"
+      >
+        Open Guide →
+      </a>
+
+    </div>
+
+
+    <div class="card searchable">
+
+      <div class="icon">
+        🤖
+      </div>
+
+      <h3>
+        Use AI Tools
+      </h3>
+
+      <p>
+        Explore practical AI tools that
+        can help with digital work.
+      </p>
+
+      <a
+        class="card-link"
+        href="ai-tools.html"
+      >
+        Open Guide →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="about">
+
+    <h2>
+      👋 About EarnPath
+    </h2>
+
+    <p>
+      EarnPath is built to help beginners discover
+      practical digital skills, online earning opportunities
+      and useful resources in one simple place.
+    </p>
+
+    <p>
+      The platform also provides ready-made website
+      templates for businesses, creators and entrepreneurs.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>
+      📩 Contact EarnPath
+    </h2>
+
+    <p>
+      Have a question, business idea or website request?
+      Get in touch with us.
+    </p>
+
+    <a
+      href="mailto:bioabubakarusman@gmail.com"
+      class="btn btn-primary"
+    >
+      Contact Us
     </a>
 
   </div>
 
-</div>
+</section>
 
 
-<div class="card website-card searchable">
+<!-- DISCLOSURE -->
 
-  <div class="website-top">📈</div>
+<section id="disclosure">
 
-  <div class="website-body">
+  <div class="about">
 
-    <h3>Facebook Business</h3>
+    <h2>
+      Affiliate Disclosure
+    </h2>
 
     <p>
-      Business-focused website concept designed
-      for online brands and social media businesses.
+      Some links on EarnPath may be affiliate links.
+      If you make a purchase through an affiliate link,
+      EarnPath may receive a commission at no additional
+      cost to you.
     </p>
-
-    <a href="facebook-business.html" class="btn btn-primary">
-      View Website
-    </a>
 
   </div>
 
-</div>
+</section>
 
-  </div></section><section id="product">  <div class="product searchable"><h2>⭐ EarnPath Beginner Guide</h2>
+</main>
 
-<p>
-  A beginner-friendly digital resource designed
-  to help you understand online earning,
-  digital skills and practical ways to start.
-</p>
 
-<a
-  href="https://selar.com/28686r5292"
-  target="_blank"
-  class="btn btn-primary"
->
-  Get the Product →
-</a>
+<!-- ================= FOOTER ================= -->
 
-  </div></section><section id="guides">  <div class="section-title"><h2>📖 Guides</h2>
-
-<p>
-  Simple resources for getting started.
-</p>
-
-  </div>  <div class="grid"><div class="card searchable">
-
-  <div class="icon">🚀</div>
-
-  <h3>Start Freelancing</h3>
+<footer>
 
   <p>
-    Understand the basics of building
-    a freelancing profile and finding opportunities.
+    © 2026 EarnPath. Learn. Earn. Grow.
   </p>
 
-  <a class="card-link" href="freelancing.html">
-    Open Guide →
-  </a>
-
-</div>
+</footer>
 
 
-<div class="card searchable">
+<!-- ================= BOTTOM NAV ================= -->
 
-  <div class="icon">💡</div>
+<nav class="bottom-nav">
 
-  <h3>Build Digital Products</h3>
-
-  <p>
-    Learn the basic process of creating
-    and selling digital products.
-  </p>
-
-  <a class="card-link" href="digital-products.html">
-    Open Guide →
-  </a>
-
-</div>
+  <div class="nav-inner">
 
 
-<div class="card searchable">
+    <button
+      class="nav-btn active"
+      onclick="goTo('top', this)"
+    >
 
-  <div class="icon">🤖</div>
+      <span>
+        🏠
+      </span>
 
-  <h3>Use AI Tools</h3>
+      Home
 
-  <p>
-    Explore practical AI tools that
-    can help with digital work.
-  </p>
+    </button>
 
-  <a class="card-link" href="ai-tools.html">
-    Open Guide →
-  </a>
 
-</div>
+    <button
+      class="nav-btn"
+      onclick="goTo('learn', this)"
+    >
 
-  </div></section><section id="about">  <div class="about"><h2>👋 About EarnPath</h2>
+      <span>
+        📚
+      </span>
 
-<p>
-  EarnPath is built to help beginners discover
-  practical digital skills, online earning opportunities
-  and useful resources in one simple place.
-</p>
+      Learn
 
-<p>
-  The platform also provides ready-made website
-  templates for businesses, creators and entrepreneurs.
-</p>
+    </button>
 
-  </div></section><section id="contact">  <div class="contact"><h2>📩 Contact EarnPath</h2>
 
-<p>
-  Have a question, business idea or website request?
-  Get in touch with us.
-</p>
+    <button
+      class="nav-btn"
+      onclick="goTo('earn', this)"
+    >
 
-<a
-  href="mailto:bioabubakarusman@gmail.com"
-  class="btn btn-primary"
->
-  Contact Us
-</a>
+      <span>
+        💰
+      </span>
 
-  </div></section><section id="disclosure">  <div class="about"><h2>Affiliate Disclosure</h2>
+      Earn
 
-<p>
-  Some links on EarnPath may be affiliate links.
-  If you make a purchase through an affiliate link,
-  EarnPath may receive a commission at no additional
-  cost to you.
-</p>
+    </button>
 
-  </div></section></main><footer>
-  <p>© 2026 EarnPath. Learn. Earn. Grow.</p>
-</footer><nav class="bottom-nav">  <div class="nav-inner"><button
-  class="nav-btn active"
-  onclick="goTo('top', this)"
->
-  <span>🏠</span>
-  Home
-</button>
 
-<button
-  class="nav-btn"
-  onclick="goTo('learn', this)"
->
-  <span>📚</span>
-  Learn
-</button>
+    <button
+      class="nav-btn"
+      onclick="goTo('websites', this)"
+    >
 
-<button
-  class="nav-btn"
-  onclick="goTo('earn', this)"
->
-  <span>💰</span>
-  Earn
-</button>
+      <span>
+        🌐
+      </span>
 
-<button
-  class="nav-btn"
-  onclick="goTo('websites', this)"
->
-  <span>🌐</span>
-  Websites
-</button>
+      Websites
 
-<button
-  class="nav-btn"
-  onclick="goTo('product', this)"
->
-  <span>🛒</span>
-  Product
-</button>
+    </button>
 
-  </div></nav><script>
 
-/* NAVIGATION */
+    <button
+      class="nav-btn"
+      onclick="goTo('product', this)"
+    >
+
+      <span>
+        🛒
+      </span>
+
+      Product
+
+    </button>
+
+
+  </div>
+
+</nav>
+
+
+<script>
+
+/* ================= NAVIGATION ================= */
 
 function goTo(sectionId, button){
 
@@ -1128,7 +1628,7 @@ function goTo(sectionId, button){
 }
 
 
-/* SEARCH */
+/* ================= SEARCH ================= */
 
 function searchContent(){
 
@@ -1144,6 +1644,7 @@ function searchContent(){
   const message =
     document.getElementById("searchMessage");
 
+
   if(query === ""){
 
     cards.forEach(function(card){
@@ -1158,7 +1659,9 @@ function searchContent(){
 
   }
 
+
   let found = 0;
+
 
   cards.forEach(function(card){
 
@@ -1179,6 +1682,7 @@ function searchContent(){
 
   });
 
+
   if(found === 0){
 
     message.textContent =
@@ -1194,40 +1698,47 @@ function searchContent(){
 }
 
 
-/* ACCOUNT SYSTEM
-   Front-end demonstration only.
-   Do not use this version to collect
-   real passwords or ID-card information.
+/* ================= ACCOUNT ================= */
+
+/*
+  IMPORTANT:
+  This is a front-end demonstration account system
+  for the static GitHub Pages version.
+
+  It is NOT secure authentication.
+  Do not use it to collect real passwords,
+  identity-card numbers or identity-card photos.
+
+  A real production account system should later
+  use a secure authentication service/backend.
 */
 
-function openAccount(){
 
-  const user =
-    localStorage.getItem("earnpathUser");
+/* OPEN ACCOUNT */
 
-  if(user){
+function openAccount(form){
 
-    toggleProfileMenu();
+  document
+    .getElementById("accountModal")
+    .style.display = "flex";
 
-  }else{
-
-    document.getElementById("accountModal").style.display =
-      "flex";
-
-    showForm("signin");
-
-  }
+  showForm(form || "signin");
 
 }
 
+
+/* CLOSE ACCOUNT */
 
 function closeAccount(){
 
-  document.getElementById("accountModal").style.display =
-    "none";
+  document
+    .getElementById("accountModal")
+    .style.display = "none";
 
 }
 
+
+/* SHOW SIGN IN / SIGN UP */
 
 function showForm(form){
 
@@ -1238,6 +1749,7 @@ function showForm(form){
       tab.classList.remove("active");
 
     });
+
 
   document
     .querySelectorAll(".account-form")
@@ -1260,7 +1772,8 @@ function showForm(form){
 
     document
       .getElementById("accountTitle")
-      .textContent = "Create Account";
+      .textContent =
+        "Create Account";
 
   }else{
 
@@ -1274,30 +1787,44 @@ function showForm(form){
 
     document
       .getElementById("accountTitle")
-      .textContent = "Welcome Back";
+      .textContent =
+        "Welcome Back";
 
   }
 
 }
 
 
-/* SIGN UP */
+/* ================= SIGN UP ================= */
 
 function signUp(event){
 
   event.preventDefault();
 
+
   const name =
-    document.getElementById("signupName").value.trim();
+    document
+      .getElementById("signupName")
+      .value
+      .trim();
+
 
   const email =
-    document.getElementById("signupEmail").value.trim();
+    document
+      .getElementById("signupEmail")
+      .value
+      .trim();
+
 
   const password =
-    document.getElementById("signupPassword").value;
+    document
+      .getElementById("signupPassword")
+      .value;
+
 
   const message =
-    document.getElementById("signupMessage");
+    document
+      .getElementById("signupMessage");
 
 
   if(password.length < 6){
@@ -1311,8 +1838,11 @@ function signUp(event){
 
 
   const user = {
+
     name:name,
+
     email:email
+
   };
 
 
@@ -1322,6 +1852,13 @@ function signUp(event){
   );
 
 
+  /*
+    Demo only.
+    This stores the password locally for testing.
+    Do not use this approach for a real production
+    authentication system.
+  */
+
   localStorage.setItem(
     "earnpathDemoPassword",
     password
@@ -1330,6 +1867,7 @@ function signUp(event){
 
   message.textContent =
     "Account created successfully!";
+
 
   setTimeout(function(){
 
@@ -1342,26 +1880,37 @@ function signUp(event){
 }
 
 
-/* SIGN IN */
+/* ================= SIGN IN ================= */
 
 function signIn(event){
 
   event.preventDefault();
 
+
   const email =
-    document.getElementById("signinEmail").value.trim();
+    document
+      .getElementById("signinEmail")
+      .value
+      .trim();
+
 
   const password =
-    document.getElementById("signinPassword").value;
+    document
+      .getElementById("signinPassword")
+      .value;
+
 
   const savedUser =
     localStorage.getItem("earnpathUser");
 
+
   const savedPassword =
     localStorage.getItem("earnpathDemoPassword");
 
+
   const message =
-    document.getElementById("signinMessage");
+    document
+      .getElementById("signinMessage");
 
 
   if(!savedUser){
@@ -1386,6 +1935,7 @@ function signIn(event){
     message.textContent =
       "Signed in successfully!";
 
+
     setTimeout(function(){
 
       closeAccount();
@@ -1404,24 +1954,43 @@ function signIn(event){
 }
 
 
-/* PROFILE */
+/* ================= UPDATE PROFILE ================= */
 
 function updateProfile(){
 
   const savedUser =
     localStorage.getItem("earnpathUser");
 
+
+  const accountButtons =
+    document.getElementById("accountButtons");
+
+
+  const loggedInActions =
+    document.getElementById("loggedInActions");
+
+
   const profileButton =
     document.getElementById("profileButton");
 
+
   if(!savedUser){
 
+    accountButtons.classList.remove("hidden");
+
+    loggedInActions.classList.add("hidden");
+
     profileButton.textContent =
-      "EP";
+      "Profile";
 
     return;
 
   }
+
+
+  accountButtons.classList.add("hidden");
+
+  loggedInActions.classList.remove("hidden");
 
 
   const user =
@@ -1442,24 +2011,30 @@ function updateProfile(){
 
 
   profileButton.textContent =
-    initials || "EP";
+    initials || "Profile";
 
 
-  document.getElementById("profileName")
+  document
+    .getElementById("profileName")
     .textContent =
       user.name;
 
-  document.getElementById("profileEmail")
+
+  document
+    .getElementById("profileEmail")
     .textContent =
       user.email;
 
 }
 
 
+/* ================= PROFILE MENU ================= */
+
 function toggleProfileMenu(){
 
   const menu =
     document.getElementById("profileMenu");
+
 
   if(menu.style.display === "block"){
 
@@ -1474,73 +2049,92 @@ function toggleProfileMenu(){
 }
 
 
-/* LOG OUT */
+/* ================= LOG OUT ================= */
 
 function logout(){
 
-  localStorage.removeItem("earnpathUser");
+  localStorage.removeItem(
+    "earnpathUser"
+  );
 
-  localStorage.removeItem("earnpathDemoPassword");
 
-  document.getElementById("profileMenu")
+  localStorage.removeItem(
+    "earnpathDemoPassword"
+  );
+
+
+  document
+    .getElementById("profileMenu")
     .style.display = "none";
+
 
   updateProfile();
 
 }
 
 
-/* CLOSE MODAL WHEN CLICKING OUTSIDE */
+/* ================= CLOSE MODAL OUTSIDE ================= */
 
 document
   .getElementById("accountModal")
-  .addEventListener("click",function(event){
+  .addEventListener(
+    "click",
+    function(event){
 
-    if(event.target === this){
+      if(event.target === this){
 
-      closeAccount();
+        closeAccount();
+
+      }
 
     }
-
-  });
-
-
-/* LOAD USER */
-
-window.addEventListener("load",function(){
-
-  updateProfile();
-
-});
+  );
 
 
-/* EarnPath PWA */
+/* ================= LOAD USER ================= */
+
+window.addEventListener(
+  "load",
+  function(){
+
+    updateProfile();
+
+  }
+);
+
+
+/* ================= EARNPATH PWA ================= */
 
 if("serviceWorker" in navigator){
 
-  window.addEventListener("load",function(){
+  window.addEventListener(
+    "load",
+    function(){
 
-    navigator.serviceWorker
-      .register("./sw.js")
-      .then(function(){
+      navigator.serviceWorker
+        .register("./sw.js")
+        .then(function(){
 
-        console.log(
-          "EarnPath app is ready"
-        );
+          console.log(
+            "EarnPath app is ready"
+          );
 
-      })
-      .catch(function(error){
+        })
+        .catch(function(error){
 
-        console.log(
-          "Service worker registration failed:",
-          error
-        );
+          console.log(
+            "Service worker registration failed:",
+            error
+          );
 
-      });
+        });
 
-  });
+    }
+  );
 
 }
 
-</script></body>
+</script>
+
+</body>
 </html>
