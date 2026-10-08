@@ -6,7 +6,7 @@
 
 <title>EarnPath — Learn. Earn. Grow.</title>
 
-<meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products and ready-made websites.">
+<meta name="description" content="EarnPath helps beginners learn practical skills, discover online earning opportunities, digital products, websites and premium resources.">
 
 <link rel="manifest" href="manifest.json">
 
@@ -71,8 +71,6 @@ button{
 .logo span{
   color:#35d07f;
 }
-
-/* ACCOUNT HEADER BUTTONS */
 
 .header-actions{
   display:flex;
@@ -233,7 +231,7 @@ button{
   text-align:center;
 }
 
-/* PROFILE MENU */
+/* ================= PROFILE MENU ================= */
 
 .profile-menu{
   position:fixed;
@@ -283,12 +281,27 @@ button{
   color:white;
   border-radius:24px;
   padding:35px 25px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(53,208,127,.08);
+  right:-80px;
+  top:-80px;
 }
 
 .hero h1{
   font-size:clamp(32px,7vw,58px);
   line-height:1.05;
   margin-bottom:15px;
+  position:relative;
+  z-index:2;
 }
 
 .hero h1 span{
@@ -299,6 +312,8 @@ button{
   color:#d8dfeb;
   line-height:1.7;
   max-width:650px;
+  position:relative;
+  z-index:2;
 }
 
 .hero-buttons{
@@ -306,6 +321,8 @@ button{
   flex-wrap:wrap;
   gap:12px;
   margin-top:22px;
+  position:relative;
+  z-index:2;
 }
 
 .btn{
@@ -329,6 +346,12 @@ button{
 .btn-light{
   background:white;
   color:#101827;
+}
+
+.btn-pro{
+  background:linear-gradient(135deg,#35d07f,#7ff0b1);
+  color:#07150e;
+  box-shadow:0 8px 25px rgba(53,208,127,.25);
 }
 
 /* ================= SEARCH ================= */
@@ -462,19 +485,161 @@ section{
   font-size:14px;
 }
 
-/* ================= PRODUCT ================= */
+/* ================= PRODUCT SECTION ================= */
 
-.product{
-  background:#101827;
-  color:white;
-  border-radius:22px;
-  padding:25px;
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-.product p{
-  color:#d8dfeb;
+.product-card{
+  background:white;
+  border-radius:21px;
+  padding:22px;
+  box-shadow:0 6px 22px rgba(0,0,0,.06);
+  border:1px solid #edf0f4;
+  transition:.2s;
+  display:flex;
+  flex-direction:column;
+}
+
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(0,0,0,.09);
+}
+
+.product-icon{
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  background:#eafaf2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:16px;
+}
+
+.product-card h3{
+  font-size:20px;
+  line-height:1.3;
+  margin-bottom:9px;
+}
+
+.product-card p{
+  color:#697386;
+  line-height:1.65;
+  font-size:14px;
+  margin-bottom:18px;
+  flex:1;
+}
+
+.product-card .btn{
+  align-self:flex-start;
+}
+
+.product-label{
+  display:inline-block;
+  color:#0c8f50;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:8px;
+}
+
+/* ================= EARNPATH PRO ================= */
+
+.pro-section{
+  position:relative;
+}
+
+.pro-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(53,208,127,.20),transparent 30%),
+    linear-gradient(135deg,#0b1322,#142b3e 55%,#0d1725);
+  color:white;
+  border-radius:26px;
+  padding:30px;
+  border:1px solid rgba(53,208,127,.25);
+  box-shadow:0 15px 45px rgba(16,24,39,.18);
+}
+
+.pro-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(53,208,127,.12);
+  border:1px solid rgba(53,208,127,.35);
+  color:#75efac;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.pro-card h2{
+  font-size:clamp(27px,5vw,40px);
+  margin-bottom:10px;
+}
+
+.pro-card .pro-subtitle{
+  color:#cbd6e5;
   line-height:1.7;
-  margin:10px 0 18px;
+  max-width:720px;
+  margin-bottom:22px;
+}
+
+.pro-price{
+  display:flex;
+  align-items:end;
+  gap:8px;
+  margin-bottom:20px;
+}
+
+.pro-price strong{
+  font-size:36px;
+  color:#35d07f;
+}
+
+.pro-price span{
+  color:#aebbd0;
+  font-size:14px;
+  padding-bottom:6px;
+}
+
+.pro-benefits{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:11px;
+  margin:20px 0 25px;
+}
+
+.pro-benefit{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:13px;
+  padding:13px;
+  color:#e8edf5;
+  font-size:14px;
+  line-height:1.4;
+}
+
+.pro-cta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.pro-note{
+  color:#9eacc0;
+  font-size:12px;
+  margin-top:14px;
 }
 
 /* ================= WEBSITE ================= */
@@ -553,15 +718,15 @@ footer{
   max-width:650px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(6,1fr);
 }
 
 .nav-btn{
   border:0;
   background:white;
-  padding:10px 5px 9px;
+  padding:10px 4px 9px;
   color:#778196;
-  font-size:11px;
+  font-size:10px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -569,12 +734,17 @@ footer{
 }
 
 .nav-btn span{
-  font-size:20px;
+  font-size:19px;
 }
 
 .nav-btn.active{
   color:#0c8f50;
   font-weight:bold;
+}
+
+.nav-btn.pro-nav{
+  color:#0c8f50;
+  font-weight:800;
 }
 
 .hidden{
@@ -587,6 +757,14 @@ footer{
 
   .grid{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  .products-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .pro-benefits{
+    grid-template-columns:1fr 1fr;
   }
 
 }
@@ -627,8 +805,39 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .products-grid{
+    grid-template-columns:1fr;
+  }
+
   .section-title h2{
     font-size:22px;
+  }
+
+  .pro-card{
+    padding:23px 18px;
+    border-radius:22px;
+  }
+
+  .pro-card h2{
+    font-size:28px;
+  }
+
+  .pro-benefits{
+    grid-template-columns:1fr;
+  }
+
+  .pro-price strong{
+    font-size:31px;
+  }
+
+  .nav-btn{
+    font-size:9px;
+    padding-left:2px;
+    padding-right:2px;
+  }
+
+  .nav-btn span{
+    font-size:17px;
   }
 
 }
@@ -648,8 +857,6 @@ footer{
       Earn<span>Path</span>
     </div>
 
-    <!-- SHOW BEFORE LOGIN -->
-
     <div class="header-actions" id="accountButtons">
 
       <button
@@ -667,9 +874,6 @@ footer{
       </button>
 
     </div>
-
-
-    <!-- SHOW AFTER LOGIN -->
 
     <div
       class="logged-in-actions hidden"
@@ -719,7 +923,6 @@ footer{
 
     </div>
 
-
     <div class="account-tabs">
 
       <button
@@ -740,9 +943,6 @@ footer{
 
     </div>
 
-
-    <!-- SIGN IN -->
-
     <form
       class="account-form active"
       id="signinForm"
@@ -762,7 +962,6 @@ footer{
 
       </div>
 
-
       <div class="form-group">
 
         <label>Password</label>
@@ -775,7 +974,6 @@ footer{
         >
 
       </div>
-
 
       <button
         class="account-submit"
@@ -790,9 +988,6 @@ footer{
       ></div>
 
     </form>
-
-
-    <!-- SIGN UP -->
 
     <form
       class="account-form"
@@ -813,7 +1008,6 @@ footer{
 
       </div>
 
-
       <div class="form-group">
 
         <label>Email</label>
@@ -826,7 +1020,6 @@ footer{
         >
 
       </div>
-
 
       <div class="form-group">
 
@@ -841,7 +1034,6 @@ footer{
         >
 
       </div>
-
 
       <button
         class="account-submit"
@@ -901,8 +1093,8 @@ footer{
 
     <p>
       EarnPath helps beginners discover practical skills,
-      online earning opportunities, digital products and
-      ready-made websites.
+      online earning opportunities, digital products,
+      ready-made websites and premium resources.
     </p>
 
     <div class="hero-buttons">
@@ -921,12 +1113,16 @@ footer{
         Start Learning
       </a>
 
+      <a
+        href="#pro"
+        class="btn btn-pro"
+      >
+        💎 Explore EarnPath Pro
+      </a>
+
     </div>
 
   </div>
-
-
-  <!-- SEARCH -->
 
   <div class="search-box">
 
@@ -945,9 +1141,6 @@ footer{
 
   <div id="searchMessage"></div>
 
-
-  <!-- STATS -->
-
   <div class="stats">
 
     <div class="stat">
@@ -960,7 +1153,6 @@ footer{
 
     </div>
 
-
     <div class="stat">
 
       <strong>📚</strong>
@@ -970,7 +1162,6 @@ footer{
       </span>
 
     </div>
-
 
     <div class="stat">
 
@@ -1003,9 +1194,7 @@ footer{
 
   </div>
 
-
   <div class="grid">
-
 
     <div class="card searchable">
 
@@ -1031,7 +1220,6 @@ footer{
 
     </div>
 
-
     <div class="card searchable">
 
       <div class="icon">
@@ -1056,7 +1244,6 @@ footer{
 
     </div>
 
-
     <div class="card searchable">
 
       <div class="icon">
@@ -1079,7 +1266,6 @@ footer{
       </a>
 
     </div>
-
 
     <div class="card searchable">
 
@@ -1126,9 +1312,7 @@ footer{
 
   </div>
 
-
   <div class="grid">
-
 
     <div class="card searchable">
 
@@ -1153,7 +1337,6 @@ footer{
       </a>
 
     </div>
-
 
     <div class="card searchable">
 
@@ -1201,9 +1384,7 @@ footer{
 
   </div>
 
-
   <div class="grid">
-
 
     <div class="card website-card searchable">
 
@@ -1233,7 +1414,6 @@ footer{
 
     </div>
 
-
     <div class="card website-card searchable">
 
       <div class="website-top">
@@ -1261,7 +1441,6 @@ footer{
       </div>
 
     </div>
-
 
     <div class="card website-card searchable">
 
@@ -1296,29 +1475,193 @@ footer{
 </section>
 
 
-<!-- PRODUCT -->
+<!-- ================= PRODUCTS ================= -->
 
 <section id="product">
 
-  <div class="product searchable">
+  <div class="section-title">
 
     <h2>
-      ⭐ EarnPath Beginner Guide
+      🛒 EarnPath Products
     </h2>
 
     <p>
-      A beginner-friendly digital resource designed
-      to help you understand online earning,
-      digital skills and practical ways to start.
+      Practical digital resources to help you learn,
+      build skills and create online opportunities.
     </p>
 
-    <a
-      href="https://selar.com/28686r5292"
-      target="_blank"
-      class="btn btn-primary"
-    >
-      Get the Product →
-    </a>
+  </div>
+
+
+  <div class="products-grid">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card searchable">
+
+      <div class="product-icon">
+        ⭐
+      </div>
+
+      <span class="product-label">
+        Beginner Guide
+      </span>
+
+      <h3>
+        EarnPath Beginner's Guide: Start Earning Online
+      </h3>
+
+      <p>
+        A beginner-friendly guide designed to help you
+        understand online earning, digital skills and
+        practical ways to get started.
+      </p>
+
+      <a
+        href="https://selar.com/28686r5292"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary"
+      >
+        Get the Guide →
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card searchable">
+
+      <div class="product-icon">
+        📘
+      </div>
+
+      <span class="product-label">
+        Online Income Guide
+      </span>
+
+      <h3>
+        The Beginner's Guide to Making Money Online
+      </h3>
+
+      <p>
+        A practical beginner resource covering online
+        opportunities, useful skills and simple ways
+        to start building an online income path.
+      </p>
+
+      <a
+        href="https://selar.com/9l70i1303n"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary"
+      >
+        Get the Guide →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EARNPATH PRO ================= -->
+
+<section id="pro" class="pro-section">
+
+  <div class="pro-card searchable">
+
+    <div class="pro-badge">
+      💎 EARNPATH PRO
+    </div>
+
+    <h2>
+      EarnPath Pro — Premium Online Growth Membership
+    </h2>
+
+    <p class="pro-subtitle">
+      Take your online journey further with premium
+      resources designed to help you develop useful
+      digital skills, discover opportunities, attract
+      clients, create digital products and build online income.
+    </p>
+
+    <div class="pro-price">
+
+      <strong>
+        ₦7,500
+      </strong>
+
+      <span>
+        / month
+      </span>
+
+    </div>
+
+    <div class="pro-benefits">
+
+      <div class="pro-benefit">
+        🔥 Premium online earning guides
+      </div>
+
+      <div class="pro-benefit">
+        💼 Client-getting systems and strategies
+      </div>
+
+      <div class="pro-benefit">
+        🤖 AI prompts and practical AI workflows
+      </div>
+
+      <div class="pro-benefit">
+        🌐 Website templates and business resources
+      </div>
+
+      <div class="pro-benefit">
+        📚 Premium business playbooks
+      </div>
+
+      <div class="pro-benefit">
+        💰 Digital product and income strategies
+      </div>
+
+      <div class="pro-benefit">
+        🧰 Useful tools and curated resources
+      </div>
+
+      <div class="pro-benefit">
+        🚀 New premium resources added regularly
+      </div>
+
+    </div>
+
+    <div class="pro-cta">
+
+      <a
+        href="https://selar.com/c49221zi0y"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-pro"
+      >
+        💎 Get EarnPath Pro →
+      </a>
+
+      <a
+        href="#product"
+        class="btn btn-light"
+      >
+        View Products
+      </a>
+
+    </div>
+
+    <p class="pro-note">
+      Secure checkout is handled through Selar. Your
+      EarnPath Pro membership gives you access to the
+      premium resources included with the subscription.
+    </p>
 
   </div>
 
@@ -1341,9 +1684,7 @@ footer{
 
   </div>
 
-
   <div class="grid">
-
 
     <div class="card searchable">
 
@@ -1369,7 +1710,6 @@ footer{
 
     </div>
 
-
     <div class="card searchable">
 
       <div class="icon">
@@ -1393,7 +1733,6 @@ footer{
       </a>
 
     </div>
-
 
     <div class="card searchable">
 
@@ -1518,76 +1857,53 @@ footer{
 
   <div class="nav-inner">
 
-
     <button
       class="nav-btn active"
       onclick="goTo('top', this)"
     >
-
-      <span>
-        🏠
-      </span>
-
+      <span>🏠</span>
       Home
-
     </button>
-
 
     <button
       class="nav-btn"
       onclick="goTo('learn', this)"
     >
-
-      <span>
-        📚
-      </span>
-
+      <span>📚</span>
       Learn
-
     </button>
-
 
     <button
       class="nav-btn"
       onclick="goTo('earn', this)"
     >
-
-      <span>
-        💰
-      </span>
-
+      <span>💰</span>
       Earn
-
     </button>
-
 
     <button
       class="nav-btn"
       onclick="goTo('websites', this)"
     >
-
-      <span>
-        🌐
-      </span>
-
+      <span>🌐</span>
       Websites
-
     </button>
-
 
     <button
       class="nav-btn"
       onclick="goTo('product', this)"
     >
-
-      <span>
-        🛒
-      </span>
-
-      Product
-
+      <span>🛒</span>
+      Products
     </button>
 
+    <button
+      class="nav-btn pro-nav"
+      onclick="goTo('pro', this)"
+    >
+      <span>💎</span>
+      Pro
+    </button>
 
   </div>
 
