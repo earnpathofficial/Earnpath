@@ -1,4 +1,4 @@
-const CACHE_NAME = "earnpath-v1";
+const CACHE_NAME = "earnpath-v2";
 
 const FILES_TO_CACHE = [
   "./",
